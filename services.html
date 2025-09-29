@@ -6,6 +6,50 @@
     <title>Services - Crystal Massage Spa</title>
     <meta name="description" content="Discover our range of massage therapy and facial treatments at Crystal Massage Spa in Herndon, VA.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Raleway';
+            src: url('font/Raleway-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Raleway';
+            src: url('font/Raleway-Italic-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: italic;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -21,12 +65,30 @@
                         'spa-gold': '#C9A96E',
                         'spa-sage': '#8B9A7A',
                         'spa-charcoal': '#2C2C2C',
-                        'spa-gray': '#6B6B6B'
+                        'spa-gray': '#6B6B6B',
+                        'spa-rose': '#D4A5A5',
+                        'spa-mint': '#A8C8A8',
+                        'healing-green': '#1D4D4F',
+                        'ivory-white': '#F6F3F1',
+                        'herbal-beige': '#D9CDBA',
+                        'wood-brown': '#9B7E63',
+                        'healing-green-light': '#2A6B6D',
+                        'healing-green-dark': '#0F2A2B',
+                        'herbal-beige-light': '#E6DCC8',
+                        'herbal-beige-dark': '#C4B5A0',
+                        'wood-brown-light': '#B8957A',
+                        'wood-brown-dark': '#7A5F4A',
+                        'earth-charcoal': '#2C2C2C',
+                        'earth-gray': '#6B6B6B',
+                        'sage-green': '#8B9A7A',
+                        'forest-green': '#4A6741'
                     },
                     fontFamily: {
                         'serif': ['Crimson Text', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
-                        'display': ['Playfair Display', 'serif']
+                        'sans': ['Raleway', 'Inter', 'sans-serif'],
+                        'display': ['Raleway', 'Playfair Display', 'serif'],
+                        'script': ['Dancing Script', 'cursive'],
+                        'raleway': ['Raleway', 'sans-serif']
                     },
                     letterSpacing: {
                         'wide': '0.05em',
@@ -39,7 +101,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .text-gradient {
-            background: linear-gradient(135deg, #5B4B8A, #7C6BA8);
+            background: linear-gradient(135deg, #1D4D4F, #2A6B6D);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -56,282 +118,357 @@
         }
     </style>
 </head>
-<body class="bg-spa-cream text-spa-charcoal font-sans antialiased">
+    <body class="bg-ivory-white text-earth-charcoal font-raleway antialiased">
     <!-- Header -->
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-spa-warm-beige/30">
+    <header class="bg-white shadow-lg sticky top-0 z-50 border-b border-spa-warm-beige/30">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center py-5">
-                <div class="flex items-center space-x-6">
+                <div class="flex items-center">
                     <img src="images/crystal-spa-logo-new.webp" 
                          alt="Crystal Massage Spa Logo" 
-                         class="h-14 w-auto object-contain">
-                    <div class="hidden sm:block">
-                        <h1 class="text-xl font-display font-semibold text-spa-charcoal tracking-wide">Crystal Massage Spa</h1>
-                        <p class="text-sm text-spa-gray font-light tracking-wide">Wellness & Restoration</p>
-                                    </div>
-                                </div>
-                <nav class="hidden lg:flex space-x-10">
-                    <a href="index.html" class="text-spa-gray font-medium text-sm tracking-wide hover:text-spa-purple transition-colors duration-300">Home</a>
-                    <a href="services.html" class="text-spa-purple font-medium text-sm tracking-wide hover:text-spa-light-purple transition-colors duration-300">Services</a>
-                    <a href="membership.html" class="text-spa-gray font-medium text-sm tracking-wide hover:text-spa-purple transition-colors duration-300">Membership</a>
-                    <a href="benefits.html" class="text-spa-gray font-medium text-sm tracking-wide hover:text-spa-purple transition-colors duration-300">Benefits</a>
-                    <a href="gift-card.html" class="text-spa-gray font-medium text-sm tracking-wide hover:text-spa-purple transition-colors duration-300">Gift Card</a>
-                    <a href="offers.html" class="text-spa-gray font-medium text-sm tracking-wide hover:text-spa-purple transition-colors duration-300">Offers</a>
-                    <a href="contact.html" class="text-spa-gray font-medium text-sm tracking-wide hover:text-spa-purple transition-colors duration-300">Contact</a>
-                    </nav>
-                <div class="flex items-center space-x-4">
-                    <a href="gift-card.html" class="bg-spa-gold text-white px-5 py-2.5 rounded-sm hover:bg-opacity-90 transition-all duration-300 text-xs font-medium tracking-wide uppercase">
-                        Gift Card
+                         class="h-28 w-auto object-contain drop-shadow-lg">
+                </div>
+                <nav class="hidden lg:flex space-x-12">
+                    <a href="index.html" class="text-earth-charcoal font-medium text-lg tracking-wide hover:text-wood-brown transition-all duration-300 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="booking.html" class="bg-spa-purple text-white px-6 py-2.5 rounded-sm hover:bg-spa-light-purple transition-all duration-300 text-xs font-medium tracking-wide uppercase">
+                    <a href="services.html" class="text-wood-brown font-semibold text-lg tracking-wide hover:text-wood-brown-dark transition-all duration-300 relative group">
+                        Services
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown-dark transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="membership.html" class="text-earth-charcoal font-medium text-lg tracking-wide hover:text-wood-brown transition-all duration-300 relative group">
+                        Membership
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+                <div class="flex items-center">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-10 py-4 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-sm">
                         Book Now
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-spa-purple to-spa-dark-purple text-white py-32 relative overflow-hidden">
+    <section class="bg-gradient-to-br from-wood-brown to-wood-brown-dark text-white py-32 relative overflow-hidden">
         <div class="absolute inset-0 bg-black/5"></div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-display font-light mb-6">Our Services</h1>
-            <p class="text-xl text-white/90 font-light">Professional massage therapy and facial treatments</p>
-                                                    </div>
+            <h1 class="text-5xl md:text-7xl font-script font-light mb-6">Our Services</h1>
+            <p class="text-xl text-white/90 font-medium">Professional massage therapy and facial treatments</p>
+        </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Massage Services -->
-    <section class="py-32 bg-white">
+    <!-- Services Overview -->
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-display font-light text-gradient text-center mb-20">Massage Therapy</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="group hover-lift">
-                    <div class="aspect-[4/3] relative mb-8 overflow-hidden">
-                        <img src="images/female-therapist-massaging-back-of-woman-lying-on-2025-01-09-04-03-49-utc.jpg" 
-                             alt="Swedish Massage" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-spa-purple/10 to-transparent"></div>
-                                                </div>
-                    <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-4">Swedish Massage</h3>
-                    <p class="text-spa-gray font-light mb-6 leading-relaxed">Classic relaxation massage using long strokes and kneading techniques to relieve tension and promote wellness.</p>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="space-y-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto">
+                        <span class="text-3xl">💆‍♀️</span>
+                    </div>
+                    <h3 class="text-2xl font-raleway font-medium text-earth-charcoal">Massage Therapy</h3>
+                    <p class="text-earth-gray font-medium leading-relaxed">Relaxation, deep tissue, and specialized treatments for complete wellness.</p>
                     <div class="space-y-2">
-                        <p class="text-spa-purple font-medium">60 min - $120</p>
-                        <p class="text-spa-purple font-medium">90 min - $160</p>
-                                            </div>
-                                        </div>
+                        <p class="text-wood-brown font-medium">60 min - $119</p>
+                        <p class="text-wood-brown font-medium">90 min - $159</p>
+                    </div>
+                </div>
                 
-                <div class="group hover-lift">
-                    <div class="aspect-[4/3] relative mb-8 overflow-hidden">
-                        <img src="images/customer-get-massage-at-spa-2024-07-09-00-16-26-utc.jpg" 
-                             alt="Deep Tissue Massage" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-spa-purple/10 to-transparent"></div>
-                                    </div>
-                    <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-4">Deep Tissue Massage</h3>
-                    <p class="text-spa-gray font-light mb-6 leading-relaxed">Targeted pressure to release muscle tension and chronic pain for deeper therapeutic benefits.</p>
+                <div class="space-y-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto">
+                        <span class="text-3xl">✨</span>
+                    </div>
+                    <h3 class="text-2xl font-raleway font-medium text-earth-charcoal">Facial Treatments</h3>
+                    <p class="text-earth-gray font-medium leading-relaxed">Customized facials for all skin types and concerns.</p>
                     <div class="space-y-2">
-                        <p class="text-spa-purple font-medium">60 min - $130</p>
-                        <p class="text-spa-purple font-medium">90 min - $170</p>
-                                </div>
-                            </div>
+                        <p class="text-wood-brown font-medium">60 min - $139</p>
+                        <p class="text-wood-brown font-medium">90 min - $179</p>
+                    </div>
+                </div>
                 
-                <div class="group hover-lift">
-                    <div class="aspect-[4/3] relative mb-8 overflow-hidden">
-                        <img src="images/couple-receiving-head-massage-relaxing-in-luxury-s-2025-03-18-18-05-46-utc.jpg" 
-                             alt="Head Scalp Treatment" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-spa-purple/10 to-transparent"></div>
-                                            </div>
-                    <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-4">Head Scalp Treatment</h3>
-                    <p class="text-spa-gray font-light mb-6 leading-relaxed">Specialized scalp, hair, and neck care with foot massage therapy for complete relaxation.</p>
+                <div class="space-y-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto">
+                        <span class="text-3xl">💕</span>
+                    </div>
+                    <h3 class="text-2xl font-raleway font-medium text-earth-charcoal">Specialty Services</h3>
+                    <p class="text-earth-gray font-medium leading-relaxed">Head & scalp treatments, couples massage, and wellness packages.</p>
                     <div class="space-y-2">
-                        <p class="text-spa-purple font-medium">60 min - $110</p>
-                        <p class="text-spa-purple font-medium">90 min - $150</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <p class="text-wood-brown font-medium">From $129</p>
+                        <p class="text-wood-brown font-medium">Packages available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Facial Services -->
+    <!-- Detailed Services -->
     <section class="py-32 bg-spa-beige">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-display font-light text-gradient text-center mb-20">Facial Treatments</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="group hover-lift bg-white rounded-sm p-8 shadow-sm">
-                    <div class="aspect-[4/3] relative mb-8 overflow-hidden">
-                        <img src="images/beautiful-young-woman-having-facial-treatment-2024-10-18-05-58-44-utc.jpg" 
-                             alt="Custom Facial" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-spa-purple/10 to-transparent"></div>
-                                                            </div>
-                    <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-4">Custom Facial</h3>
-                    <p class="text-spa-gray font-light mb-6 leading-relaxed">Personalized facial treatment tailored to your skin's unique needs and concerns.</p>
-                    <div class="space-y-2">
-                        <p class="text-spa-purple font-medium">60 min - $100</p>
-                        <p class="text-spa-purple font-medium">90 min - $140</p>
-                                                            </div>
-                                                        </div>
-                
-                <div class="group hover-lift bg-white rounded-sm p-8 shadow-sm">
-                    <div class="aspect-[4/3] relative mb-8 overflow-hidden">
-                        <img src="images/anti-aging-facial-massage-2024-10-19-03-36-44-utc.jpg" 
-                             alt="Anti-Aging Facial" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-spa-purple/10 to-transparent"></div>
-                                                    </div>
-                    <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-4">Anti-Aging Facial</h3>
-                    <p class="text-spa-gray font-light mb-6 leading-relaxed">Advanced treatment to reduce fine lines and improve skin texture for youthful radiance.</p>
-                    <div class="space-y-2">
-                        <p class="text-spa-purple font-medium">75 min - $150</p>
-                                                            </div>
-                                                        </div>
-                
-                <div class="group hover-lift bg-white rounded-sm p-8 shadow-sm">
-                    <div class="aspect-[4/3] relative mb-8 overflow-hidden">
-                        <img src="images/esthetician-giving-a-facial-massage-with-cream-on-2025-03-05-04-30-16-utc.jpg" 
-                             alt="Hydrating Facial" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-spa-purple/10 to-transparent"></div>
-                                                    </div>
-                    <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-4">Hydrating Facial</h3>
-                    <p class="text-spa-gray font-light mb-6 leading-relaxed">Deep hydration treatment for dry and dehydrated skin to restore moisture balance.</p>
-                    <div class="space-y-2">
-                        <p class="text-spa-purple font-medium">60 min - $120</p>
-                                        </div>
-                                    </div>
-                                </div>
+            <h2 class="text-4xl md:text-5xl font-script font-light text-gradient text-center mb-20">Service Details</h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Massage Services -->
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-raleway font-medium text-earth-charcoal mb-8">Massage Therapy</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-medium text-earth-charcoal mb-2">Relaxation Massage</h4>
+                            <p class="text-earth-gray font-light mb-4">Classic Swedish techniques for pure relaxation and stress relief.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-wood-brown font-medium">60 min - $119</span>
+                                <span class="text-wood-brown font-medium">90 min - $159</span>
                             </div>
-                        </section>
-
-    <div class="section-divider"></div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-medium text-earth-charcoal mb-2">Deep Tissue Relief</h4>
+                            <p class="text-earth-gray font-light mb-4">Targeted pressure for chronic pain and muscle tension.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-wood-brown font-medium">60 min - $129</span>
+                                <span class="text-wood-brown font-medium">90 min - $169</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-medium text-earth-charcoal mb-2">Head & Scalp Treatment</h4>
+                            <p class="text-earth-gray font-light mb-4">Specialized scalp, hair, and neck care with foot massage.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-wood-brown font-medium">60 min - $129</span>
+                                <span class="text-wood-brown font-medium">90 min - $169</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Facial Services -->
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-raleway font-medium text-earth-charcoal mb-8">Facial Treatments</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-medium text-earth-charcoal mb-2">Classic Facial</h4>
+                            <p class="text-earth-gray font-light mb-4">Deep cleansing and nourishing treatment for all skin types.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-wood-brown font-medium">60 min - $139</span>
+                                <span class="text-wood-brown font-medium">90 min - $179</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-medium text-earth-charcoal mb-2">Anti-Aging Facial</h4>
+                            <p class="text-earth-gray font-light mb-4">Advanced treatment to reduce fine lines and improve skin texture.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-wood-brown font-medium">75 min - $150</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-sm">
+                            <h4 class="text-xl font-medium text-earth-charcoal mb-2">Hydrating Facial</h4>
+                            <p class="text-earth-gray font-light mb-4">Deep hydration treatment for dry and dehydrated skin.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-wood-brown font-medium">60 min - $120</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Spa Packages -->
     <section class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-display font-light text-gradient text-center mb-20">Spa Packages</h2>
+            <h2 class="text-4xl md:text-5xl font-script font-light text-gradient text-center mb-20">Spa Packages</h2>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="group hover-lift bg-gradient-to-br from-spa-purple to-spa-light-purple text-white rounded-sm p-12 shadow-xl">
+                <div class="group hover-lift bg-gradient-to-br from-wood-brown to-wood-brown-light text-white rounded-lg p-12 shadow-xl">
                     <div class="text-center mb-10">
                         <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                             <span class="text-2xl">✨</span>
-                                </div>
-                        <h3 class="text-3xl font-display font-light mb-4">Wellness Package</h3>
+                        </div>
+                        <h3 class="text-3xl font-raleway font-light mb-4">Wellness Package</h3>
                         <p class="text-lg text-white/90 font-light">Complete relaxation experience</p>
-                            </div>
+                    </div>
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center space-x-4">
-                            <div class="w-1 h-1 bg-spa-gold rounded-full flex-shrink-0"></div>
+                            <div class="w-1 h-1 bg-wood-brown-light rounded-full flex-shrink-0"></div>
                             <span class="font-light">60-minute Swedish massage</span>
-                                    </li>
+                        </li>
                         <li class="flex items-center space-x-4">
-                            <div class="w-1 h-1 bg-spa-gold rounded-full flex-shrink-0"></div>
+                            <div class="w-1 h-1 bg-wood-brown-light rounded-full flex-shrink-0"></div>
                             <span class="font-light">Custom facial treatment</span>
-                                    </li>
+                        </li>
                         <li class="flex items-center space-x-4">
-                            <div class="w-1 h-1 bg-spa-gold rounded-full flex-shrink-0"></div>
+                            <div class="w-1 h-1 bg-wood-brown-light rounded-full flex-shrink-0"></div>
                             <span class="font-light">Access to relaxation lounge</span>
-                                    </li>
-                                </ul>
+                        </li>
+                    </ul>
                     <div class="text-center">
-                        <p class="text-3xl font-display font-light text-spa-gold mb-6">$200 <span class="text-lg text-white/70 line-through">$220</span></p>
-                        <a href="booking.html" class="bg-spa-gold text-white px-8 py-3 rounded-sm font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
+                        <p class="text-3xl font-raleway font-light text-wood-brown-light mb-6">$200 <span class="text-lg text-white/70 line-through">$220</span></p>
+                        <a href="booking.html" class="bg-wood-brown-light text-white px-8 py-3 rounded-lg font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
                             Book Package
                         </a>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
                 
-                <div class="group hover-lift bg-gradient-to-br from-spa-gold to-yellow-600 text-white rounded-sm p-12 shadow-xl">
+                <div class="group hover-lift bg-gradient-to-br from-healing-green to-healing-green-light text-white rounded-lg p-12 shadow-xl">
                     <div class="text-center mb-10">
                         <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                             <span class="text-2xl">💕</span>
-                                    </div>
-                        <h3 class="text-3xl font-display font-light mb-4">Couples Retreat</h3>
+                        </div>
+                        <h3 class="text-3xl font-raleway font-light mb-4">Couples Retreat</h3>
                         <p class="text-lg text-white/90 font-light">Perfect for special occasions</p>
-                                </div>
+                    </div>
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center space-x-4">
                             <div class="w-1 h-1 bg-white rounded-full flex-shrink-0"></div>
                             <span class="font-light">Side-by-side massages</span>
-                                </li>
+                        </li>
                         <li class="flex items-center space-x-4">
                             <div class="w-1 h-1 bg-white rounded-full flex-shrink-0"></div>
                             <span class="font-light">Shared relaxation space</span>
-                                </li>
+                        </li>
                         <li class="flex items-center space-x-4">
                             <div class="w-1 h-1 bg-white rounded-full flex-shrink-0"></div>
                             <span class="font-light">Champagne service</span>
-                                </li>
-                            </ul>
+                        </li>
+                    </ul>
                     <div class="text-center">
-                        <p class="text-3xl font-display font-light text-white mb-6">$350 <span class="text-lg text-white/70 line-through">$400</span></p>
-                        <a href="booking.html" class="bg-white text-spa-purple px-8 py-3 rounded-sm font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
+                        <p class="text-3xl font-raleway font-light text-white mb-6">$350 <span class="text-lg text-white/70 line-through">$400</span></p>
+                        <a href="booking.html" class="bg-white text-healing-green px-8 py-3 rounded-lg font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
                             Book Package
                         </a>
                     </div>
                 </div>
             </div>
-                        </div>
+        </div>
     </section>
 
-    <div class="section-divider"></div>
-
     <!-- CTA Section -->
-    <section class="py-32 bg-gradient-to-r from-spa-purple to-spa-light-purple text-white relative overflow-hidden">
+    <section class="py-32 bg-gradient-to-r from-wood-brown to-wood-brown-light text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/5"></div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-display font-light mb-8">Ready to Book Your Service?</h2>
+            <h2 class="text-4xl md:text-5xl font-script font-light mb-8">Ready to Book Your Service?</h2>
             <p class="text-xl mb-12 font-light">Experience the healing power of professional massage and facial treatments</p>
-            <a href="booking.html" class="bg-spa-gold text-white px-10 py-4 rounded-sm font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
+            <a href="booking.html" class="bg-wood-brown-light text-white px-10 py-4 rounded-sm font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
                 Book Now
             </a>
                         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-spa-charcoal text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12">
+    <footer class="bg-gradient-to-br from-earth-charcoal via-wood-brown-dark to-forest-green text-white py-24 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-herbal-beige via-wood-brown to-herbal-beige"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16">
+                <!-- Brand Section -->
                 <div class="space-y-6">
-                    <img src="images/crystal-spa-logo-new.webp" 
-                         alt="Crystal Massage Spa Logo" 
-                         class="h-10 w-auto object-contain">
-                    <h3 class="text-lg font-display font-medium">Crystal Massage Spa</h3>
-                    <p class="text-spa-gray font-light text-sm leading-relaxed">Your wellness destination in Herndon, VA</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="images/crystal-spa-logo-new.webp" 
+                             alt="Crystal Massage Spa Logo" 
+                             class="h-20 w-auto object-contain">
+                        <div>
+                            <h3 class="text-lg font-raleway font-semibold text-herbal-beige">Crystal Massage Spa</h3>
+                            <p class="text-xs text-herbal-beige/80 font-light">Wellness & Restoration</p>
                         </div>
-                <div>
-                    <h4 class="text-sm font-medium mb-6 tracking-wide uppercase">Services</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="services.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Massage Therapy</a></li>
-                        <li><a href="services.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Facial Treatments</a></li>
-                        <li><a href="services.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Spa Packages</a></li>
-                    </ul>
                     </div>
-                <div>
-                    <h4 class="text-sm font-medium mb-6 tracking-wide uppercase">Quick Links</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="booking.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Book Now</a></li>
-                        <li><a href="gift-card.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Gift Cards</a></li>
-                        <li><a href="contact.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Contact</a></li>
-                    </ul>
+                    <p class="text-herbal-beige/90 font-light text-sm leading-relaxed">Your sanctuary for healing and rejuvenation in Herndon, VA. Experience the perfect blend of traditional techniques and modern wellness.</p>
+                    <div class="flex space-x-4">
+                        <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-4 py-2 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xs">
+                            Book Now
+                        </a>
                     </div>
+                </div>
+                
+                <!-- Services Section -->
                 <div>
-                    <h4 class="text-sm font-medium mb-6 tracking-wide uppercase">Contact</h4>
-                    <div class="space-y-3 text-sm text-spa-gray font-light">
-                        <p>102 Elden St, Suite 18</p>
-                        <p>Herndon, VA</p>
-                        <p>571-352-4502</p>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Swedish Massage
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Deep Tissue
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Hot Stone Therapy
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Facial Treatments
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Couples Massage
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about-us.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            About Us
+                        </a></li>
+                        <li><a href="staff.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Our Team
+                        </a></li>
+                        <li><a href="membership.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Membership
+                        </a></li>
+                        <li><a href="benefits.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Benefits
+                        </a></li>
+                        <li><a href="gift-card.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Gift Cards
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Section -->
+                <div>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Visit Us</h4>
+                    <div class="space-y-4">
+                        <div class="bg-herbal-beige/10 rounded-lg p-4 border border-herbal-beige/20">
+                            <h5 class="text-herbal-beige font-medium text-sm mb-2">Location I</h5>
+                            <p class="text-herbal-beige/80 text-xs leading-relaxed">102 Elden St, Suite 18<br>Herndon, VA 20170</p>
+                            <p class="text-herbal-beige/80 text-xs mt-2">571-352-4502</p>
+                        </div>
+                        <div class="bg-herbal-beige/10 rounded-lg p-4 border border-herbal-beige/20">
+                            <h5 class="text-herbal-beige font-medium text-sm mb-2">Location II</h5>
+                            <p class="text-herbal-beige/80 text-xs leading-relaxed">150 Elden St, Suite 150<br>Herndon, VA 20170</p>
+                            <p class="text-herbal-beige/80 text-xs mt-2">571-519-9086</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="border-t border-herbal-beige/20 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-herbal-beige/80 text-sm">&copy; 2024 Crystal Massage Spa. All rights reserved.</p>
+                        <p class="text-herbal-beige/60 text-xs mt-1">Licensed & Insured • Professional Massage Therapy</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="privacy.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Privacy Policy</a>
+                        <a href="terms.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Terms of Service</a>
+                        <a href="contact.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Contact</a>
+                    </div>
                 </div>
             </div>
         </div>
-            <div class="border-t border-spa-gray/20 mt-16 pt-8 text-center text-spa-gray text-sm font-light">
-                <p>&copy; 2024 Crystal Massage Spa. All rights reserved.</p>
-    </div>
-</div>
     </footer>
 </body>
 </html>

@@ -6,43 +6,121 @@
     <title>Membership - Crystal Massage Spa</title>
     <meta name="description" content="Join our membership program at Crystal Massage Spa for exclusive benefits and savings.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Raleway';
+            src: url('font/Raleway-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Raleway';
+            src: url('font/Raleway-Italic-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: italic;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'spa-green': '#2D5A27',
-                        'spa-gold': '#D4AF37',
-                        'spa-cream': '#F5F5DC',
-                        'spa-sage': '#9CAF88'
+                        'spa-beige': '#F7F3F0',
+                        'spa-cream': '#FDFCFB',
+                        'spa-warm-beige': '#E8E0D8',
+                        'spa-purple': '#5B4B8A',
+                        'spa-light-purple': '#7C6BA8',
+                        'spa-dark-purple': '#3D2C5A',
+                        'spa-lavender': '#B8A9D9',
+                        'spa-gold': '#C9A96E',
+                        'spa-sage': '#8B9A7A',
+                        'spa-charcoal': '#2C2C2C',
+                        'spa-gray': '#6B6B6B',
+                        'spa-rose': '#D4A5A5',
+                        'spa-mint': '#A8C8A8',
+                        'healing-green': '#1D4D4F',
+                        'ivory-white': '#F6F3F1',
+                        'herbal-beige': '#D9CDBA',
+                        'wood-brown': '#9B7E63',
+                        'healing-green-light': '#2A6B6D',
+                        'healing-green-dark': '#0F2A2B',
+                        'herbal-beige-light': '#E6DCC8',
+                        'herbal-beige-dark': '#C4B5A0',
+                        'wood-brown-light': '#B8957A',
+                        'wood-brown-dark': '#7A5F4A',
+                        'earth-charcoal': '#2C2C2C',
+                        'earth-gray': '#6B6B6B',
+                        'sage-green': '#8B9A7A',
+                        'forest-green': '#4A6741'
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'serif'],
+                        'sans': ['Raleway', 'Inter', 'sans-serif'],
+                        'display': ['Raleway', 'Playfair Display', 'serif'],
+                        'script': ['Dancing Script', 'cursive'],
+                        'raleway': ['Raleway', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-spa-cream text-gray-800">
+    <body class="bg-ivory-white text-earth-charcoal font-raleway antialiased">
     <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+    <header class="bg-white shadow-lg sticky top-0 z-50 border-b border-spa-warm-beige/30">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center py-5">
                 <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-spa-green">Crystal Massage Spa</a>
+                    <img src="images/crystal-spa-logo-new.webp" 
+                         alt="Crystal Massage Spa Logo" 
+                         class="h-28 w-auto object-contain drop-shadow-lg">
                 </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-600 hover:text-spa-gold transition-colors">Home</a>
-                    <a href="services.html" class="text-gray-600 hover:text-spa-gold transition-colors">Services</a>
-                    <a href="membership.html" class="text-spa-green hover:text-spa-gold transition-colors">Membership</a>
-                    <a href="benefits.html" class="text-gray-600 hover:text-spa-gold transition-colors">Benefits</a>
-                    <a href="gift-card.html" class="text-gray-600 hover:text-spa-gold transition-colors">Gift Card</a>
-                    <a href="offers.html" class="text-gray-600 hover:text-spa-gold transition-colors">Offers</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-spa-gold transition-colors">Contact</a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <a href="gift-card.html" class="bg-spa-gold text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition-colors text-sm font-medium">
-                        Gift Card
+                <nav class="hidden lg:flex space-x-12">
+                    <a href="index.html" class="text-earth-charcoal font-medium text-lg tracking-wide hover:text-wood-brown transition-all duration-300 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="booking.html" class="bg-spa-green text-white px-6 py-2 rounded-lg hover:bg-green-800 transition-colors font-medium">
+                    <a href="services.html" class="text-earth-charcoal font-medium text-lg tracking-wide hover:text-wood-brown transition-all duration-300 relative group">
+                        Services
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="membership.html" class="text-wood-brown font-semibold text-lg tracking-wide hover:text-wood-brown-dark transition-all duration-300 relative group">
+                        Membership
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown-dark transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+                <div class="flex items-center">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-10 py-4 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-sm">
                         Book Now
                     </a>
                 </div>
@@ -51,135 +129,222 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-spa-green to-spa-sage text-white py-20">
+    <section class="bg-gradient-to-br from-wood-brown to-herbal-beige text-white py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Membership Program</h1>
-            <p class="text-xl md:text-2xl text-spa-cream">Exclusive benefits and savings for our valued members</p>
+            <h1 class="text-5xl md:text-7xl font-script font-bold mb-8 tracking-wide">Membership Program</h1>
+            <p class="text-xl md:text-2xl text-ivory-white font-medium leading-relaxed max-w-3xl mx-auto">Exclusive benefits and savings for our valued members</p>
         </div>
     </section>
 
     <!-- Membership Plans -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-spa-green mb-6">Choose Your Membership</h2>
-                <p class="text-xl text-gray-700">Join our wellness community and enjoy exclusive benefits</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-script font-bold text-wood-brown mb-8 tracking-wide">Choose Your Membership</h2>
+                <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed max-w-2xl mx-auto">Join our wellness community and enjoy exclusive benefits</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-spa-cream rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-spa-green mb-4">Basic Member</h3>
-                    <p class="text-3xl font-bold text-spa-gold mb-6">$29/month</p>
-                    <ul class="space-y-3 mb-8">
+                <div class="bg-ivory-white rounded-2xl p-10 shadow-xl border border-herbal-beige/20 hover:shadow-2xl transition-all duration-300">
+                    <h3 class="text-3xl font-script font-bold text-wood-brown mb-6 text-center">Silver Membership</h3>
+                    <p class="text-4xl font-bold text-wood-brown-light mb-8 text-center">$99<span class="text-lg font-medium text-gray-600">/month</span></p>
+                    <ul class="space-y-4 mb-10">
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>10% off all services</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">60 min standard treatment</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Priority booking</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">50% off one add-on service</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Monthly wellness tips</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">10% product & service discount</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">Family sharing for $10</span>
                         </li>
                     </ul>
-                    <button class="bg-spa-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-800 transition-colors w-full">
-                        Join Basic
+                    <button class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-10 py-4 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg w-full">
+                        Join Silver
                     </button>
                 </div>
                 
-                <div class="bg-gradient-to-br from-spa-sage to-spa-green text-white rounded-2xl p-8 shadow-xl border-4 border-spa-gold">
-                    <div class="text-center mb-4">
-                        <span class="bg-spa-gold text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                <div class="bg-gradient-to-br from-herbal-beige to-wood-brown text-white rounded-2xl p-10 shadow-2xl border-4 border-wood-brown-light hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                    <div class="text-center mb-6">
+                        <span class="bg-wood-brown-light text-white px-6 py-2 rounded-full text-sm font-bold tracking-wide uppercase">Most Popular</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Premium Member</h3>
-                    <p class="text-3xl font-bold text-spa-gold mb-6">$49/month</p>
-                    <ul class="space-y-3 mb-8">
+                    <h3 class="text-3xl font-script font-bold mb-6 text-center">Gold Membership</h3>
+                    <p class="text-4xl font-bold text-wood-brown-light mb-8 text-center">$139<span class="text-lg font-medium text-ivory-white/80">/month</span></p>
+                    <ul class="space-y-4 mb-10">
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>20% off all services</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-ivory-white font-medium text-lg">90 min full-body treatment with foot therapy</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Priority booking</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-ivory-white font-medium text-lg">50% off one add-on service</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Free monthly facial</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-ivory-white font-medium text-lg">15% product & service discount</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Exclusive member events</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-ivory-white font-medium text-lg">Family sharing for $10</span>
                         </li>
                     </ul>
-                    <button class="bg-spa-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors w-full">
-                        Join Premium
+                    <button class="group bg-gradient-to-r from-wood-brown-light via-wood-brown to-wood-brown-dark text-white px-10 py-4 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg w-full">
+                        Join Gold
                     </button>
                 </div>
                 
-                <div class="bg-spa-cream rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-spa-green mb-4">VIP Member</h3>
-                    <p class="text-3xl font-bold text-spa-gold mb-6">$79/month</p>
-                    <ul class="space-y-3 mb-8">
+                <div class="bg-ivory-white rounded-2xl p-10 shadow-xl border border-herbal-beige/20 hover:shadow-2xl transition-all duration-300">
+                    <h3 class="text-3xl font-script font-bold text-wood-brown mb-6 text-center">Diamond Membership</h3>
+                    <p class="text-4xl font-bold text-wood-brown-light mb-8 text-center">$179<span class="text-lg font-medium text-gray-600">/month</span></p>
+                    <ul class="space-y-4 mb-10">
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>30% off all services</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">120 min luxury treatment</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>VIP booking priority</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">One free add-on service</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Free monthly massage</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">20% product & service discount</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-spa-gold text-xl mr-3">✓</span>
-                            <span>Personal wellness coach</span>
+                            <span class="text-wood-brown-light text-2xl mr-4 font-bold">✓</span>
+                            <span class="text-gray-700 font-medium text-lg">Family sharing for $10</span>
                         </li>
                     </ul>
-                    <button class="bg-spa-sage text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full">
-                        Join VIP
+                    <button class="group bg-gradient-to-r from-herbal-beige via-wood-brown to-wood-brown-dark text-white px-10 py-4 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg w-full">
+                        Join Diamond
                     </button>
                 </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <p class="text-xl text-gray-700 font-medium leading-relaxed max-w-3xl mx-auto">All membership tiers offer the flexibility to upgrade or adjust to suit your evolving needs.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Crystal Massage Spa</h3>
-                    <p class="text-gray-300">Your wellness destination in Herndon, VA</p>
+    <footer class="bg-gradient-to-br from-earth-charcoal via-wood-brown-dark to-forest-green text-white py-24 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-herbal-beige via-wood-brown to-herbal-beige"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16">
+                <!-- Brand Section -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3">
+                        <img src="images/crystal-spa-logo-new.webp" 
+                             alt="Crystal Massage Spa Logo" 
+                             class="h-20 w-auto object-contain">
+                        <div>
+                            <h3 class="text-lg font-raleway font-semibold text-herbal-beige">Crystal Massage Spa</h3>
+                            <p class="text-xs text-herbal-beige/80 font-light">Wellness & Restoration</p>
+                        </div>
+                    </div>
+                    <p class="text-herbal-beige/90 font-light text-sm leading-relaxed">Your sanctuary for healing and rejuvenation in Herndon, VA. Experience the perfect blend of traditional techniques and modern wellness.</p>
+                    <div class="flex space-x-4">
+                        <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-4 py-2 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xs">
+                            Book Now
+                        </a>
+                    </div>
                 </div>
+                
+                <!-- Services Section -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="services.html" class="hover:text-white transition-colors">Massage Therapy</a></li>
-                        <li><a href="services.html" class="hover:text-white transition-colors">Facial Treatments</a></li>
-                        <li><a href="services.html" class="hover:text-white transition-colors">Spa Packages</a></li>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Swedish Massage
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Deep Tissue
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Hot Stone Therapy
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Facial Treatments
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Couples Massage
+                        </a></li>
                     </ul>
                 </div>
+                
+                <!-- Company Section -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="booking.html" class="hover:text-white transition-colors">Book Now</a></li>
-                        <li><a href="gift-card.html" class="hover:text-white transition-colors">Gift Cards</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about-us.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            About Us
+                        </a></li>
+                        <li><a href="staff.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Our Team
+                        </a></li>
+                        <li><a href="membership.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Membership
+                        </a></li>
+                        <li><a href="benefits.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Benefits
+                        </a></li>
+                        <li><a href="gift-card.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Gift Cards
+                        </a></li>
                     </ul>
                 </div>
+                
+                <!-- Contact Section -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-300 mb-2">102 Elden St, Suite 18</p>
-                    <p class="text-gray-300 mb-2">Herndon, VA</p>
-                    <p class="text-gray-300">571-352-4502</p>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Visit Us</h4>
+                    <div class="space-y-4">
+                        <div class="bg-herbal-beige/10 rounded-lg p-4 border border-herbal-beige/20">
+                            <h5 class="text-herbal-beige font-medium text-sm mb-2">Location I</h5>
+                            <p class="text-herbal-beige/80 text-xs leading-relaxed">102 Elden St, Suite 18<br>Herndon, VA 20170</p>
+                            <p class="text-herbal-beige/80 text-xs mt-2">571-352-4502</p>
+                        </div>
+                        <div class="bg-herbal-beige/10 rounded-lg p-4 border border-herbal-beige/20">
+                            <h5 class="text-herbal-beige font-medium text-sm mb-2">Location II</h5>
+                            <p class="text-herbal-beige/80 text-xs leading-relaxed">150 Elden St, Suite 150<br>Herndon, VA 20170</p>
+                            <p class="text-herbal-beige/80 text-xs mt-2">571-519-9086</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2024 Crystal Massage Spa. All rights reserved.</p>
+            
+            <!-- Bottom Section -->
+            <div class="border-t border-herbal-beige/20 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-herbal-beige/80 text-sm">&copy; 2024 Crystal Massage Spa. All rights reserved.</p>
+                        <p class="text-herbal-beige/60 text-xs mt-1">Licensed & Insured • Professional Massage Therapy</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="privacy.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Privacy Policy</a>
+                        <a href="terms.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Terms of Service</a>
+                        <a href="contact.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

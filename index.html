@@ -6,6 +6,50 @@
     <title>Crystal Massage Spa - Relax and Restore Your Mind and Body</title>
     <meta name="description" content="Crystal Massage Spa offers healing massage and custom facials in Herndon, VA. Book your wellness experience today.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Dancing Script';
+            src: url('font/DancingScript-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Raleway';
+            src: url('font/Raleway-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Raleway';
+            src: url('font/Raleway-Italic-VariableFont_wght.ttf') format('truetype-variations');
+            font-weight: 100 900;
+            font-style: italic;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -23,13 +67,28 @@
                         'spa-charcoal': '#2C2C2C',
                         'spa-gray': '#6B6B6B',
                         'spa-rose': '#D4A5A5',
-                        'spa-mint': '#A8C8A8'
+                        'spa-mint': '#A8C8A8',
+                        'healing-green': '#1D4D4F',
+                        'ivory-white': '#F6F3F1',
+                        'herbal-beige': '#D9CDBA',
+                        'wood-brown': '#9B7E63',
+                        'healing-green-light': '#2A6B6D',
+                        'healing-green-dark': '#0F2A2B',
+                        'herbal-beige-light': '#E6DCC8',
+                        'herbal-beige-dark': '#C4B5A0',
+                        'wood-brown-light': '#B8957A',
+                        'wood-brown-dark': '#7A5F4A',
+                        'earth-charcoal': '#2C2C2C',
+                        'earth-gray': '#6B6B6B',
+                        'sage-green': '#8B9A7A',
+                        'forest-green': '#4A6741'
                     },
                     fontFamily: {
                         'serif': ['Crimson Text', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
-                        'display': ['Playfair Display', 'serif'],
-                        'script': ['Dancing Script', 'cursive']
+                        'sans': ['Raleway', 'Inter', 'sans-serif'],
+                        'display': ['Raleway', 'Playfair Display', 'serif'],
+                        'script': ['Dancing Script', 'cursive'],
+                        'raleway': ['Raleway', 'sans-serif']
                     },
                     letterSpacing: {
                         'wide': '0.05em',
@@ -54,10 +113,10 @@
             left: 0;
             right: 0;
             z-index: 50;
-            background: linear-gradient(135deg, #5B4B8A, #7C6BA8);
+            background: linear-gradient(135deg, #1D4D4F, #2A6B6D);
             backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 -8px 32px rgba(91, 75, 138, 0.3);
+            border-top: 1px solid rgba(217, 205, 186, 0.2);
+            box-shadow: 0 -8px 32px rgba(29, 77, 79, 0.3);
         }
         @media (min-width: 768px) {
             .sticky-book-now {
@@ -65,21 +124,21 @@
             }
         }
         .text-gradient {
-            background: linear-gradient(135deg, #5B4B8A, #7C6BA8);
+            background: linear-gradient(135deg, #1D4D4F, #2A6B6D);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .text-gradient-gold {
-            background: linear-gradient(135deg, #C9A96E, #D4AF37);
+        .text-gradient-wood {
+            background: linear-gradient(135deg, #9B7E63, #B8957A);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         .glass-morphism {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(217, 205, 186, 0.15);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(217, 205, 186, 0.2);
         }
         .hover-lift {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -240,10 +299,10 @@
         }
         /* Enhanced button hover effects */
         .hero-slideshow-container a[href="booking.html"] {
-            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4), 0 20px 80px rgba(139, 92, 246, 0.2);
+            box-shadow: 0 10px 40px rgba(155, 126, 99, 0.4), 0 20px 80px rgba(155, 126, 99, 0.2);
         }
         .hero-slideshow-container a[href="booking.html"]:hover {
-            box-shadow: 0 15px 60px rgba(139, 92, 246, 0.6), 0 30px 120px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 15px 60px rgba(155, 126, 99, 0.6), 0 30px 120px rgba(155, 126, 99, 0.3);
             animation: none; /* Stop pulse on hover */
         }
         /* Perfect text centering for all buttons */
@@ -262,21 +321,18 @@
             gap: 1.5rem;
         }
         /* Enhanced theme color contrast */
-        .text-spa-gold {
-            color: #D4AF37 !important;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9), 0 8px 16px rgba(0, 0, 0, 0.6), 0 12px 24px rgba(0, 0, 0, 0.3);
+        .text-wood-brown {
+            color: #9B7E63;
         }
-        .text-spa-purple {
-            color: #8B5CF6 !important;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9), 0 8px 16px rgba(0, 0, 0, 0.6), 0 12px 24px rgba(0, 0, 0, 0.3);
+        .text-healing-green {
+            color: #1D4D4F;
         }
         .text-white {
-            color: #FFFFFF !important;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9), 0 8px 16px rgba(0, 0, 0, 0.6), 0 12px 24px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
         }
     </style>
 </head>
-<body class="bg-spa-cream text-spa-charcoal font-sans antialiased">
+    <body class="bg-ivory-white text-earth-charcoal font-raleway antialiased">
     <!-- Header -->
     <header class="bg-white shadow-lg sticky top-0 z-50 border-b border-spa-warm-beige/30">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -287,27 +343,27 @@
                          class="h-28 w-auto object-contain drop-shadow-lg">
                 </div>
                 <nav class="hidden lg:flex space-x-12">
-                    <a href="index.html" class="text-spa-purple font-semibold text-lg tracking-wide hover:text-spa-gold transition-all duration-300 relative group">
+                    <a href="index.html" class="text-wood-brown font-semibold text-lg tracking-wide hover:text-wood-brown-dark transition-all duration-300 relative group">
                         Home
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-spa-gold transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown-dark transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="services.html" class="text-spa-charcoal font-medium text-lg tracking-wide hover:text-spa-purple transition-all duration-300 relative group">
+                    <a href="services.html" class="text-earth-charcoal font-medium text-lg tracking-wide hover:text-wood-brown transition-all duration-300 relative group">
                         Services
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-spa-purple transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="membership.html" class="text-spa-charcoal font-medium text-lg tracking-wide hover:text-spa-purple transition-all duration-300 relative group">
+                    <a href="membership.html" class="text-earth-charcoal font-medium text-lg tracking-wide hover:text-wood-brown transition-all duration-300 relative group">
                         Membership
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-spa-purple transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-wood-brown transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 </nav>
                 <div class="flex items-center">
-                    <a href="booking.html" class="bg-gradient-to-r from-spa-purple to-purple-600 text-white px-10 py-4 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm font-bold tracking-wide uppercase">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-10 py-4 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-sm">
                         Book Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-        </header>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Hero Slideshow Section -->
     <section class="relative overflow-hidden h-screen">
@@ -321,11 +377,11 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-7xl px-8 text-container">
-                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-serif mb-6 leading-tight drop-shadow-2xl">
-                                Escape to <span class="text-spa-gold drop-shadow-2xl">Pure</span><br>
-                                <span class="text-white drop-shadow-2xl">Bliss</span>
+                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-script mb-6 leading-tight">
+                                Escape to <span class="text-herbal-beige">Pure</span><br>
+                                <span class="text-white">Bliss</span>
                             </h1>
-                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose drop-shadow-2xl max-w-5xl mx-auto">
+                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose max-w-5xl mx-auto">
                                 Where stress melts away and your soul finds peace in our sanctuary of healing
                             </p>
                 </div>
@@ -346,11 +402,11 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-7xl px-8 text-container">
-                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-serif mb-6 leading-tight drop-shadow-2xl">
-                                Master <span class="text-spa-purple drop-shadow-2xl">Healers</span><br>
-                                <span class="text-white drop-shadow-2xl">At Work</span>
+                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-script mb-6 leading-tight">
+                                Master <span class="text-herbal-beige">Healers</span><br>
+                                <span class="text-white">At Work</span>
                             </h1>
-                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose drop-shadow-2xl max-w-5xl mx-auto">
+                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose max-w-5xl mx-auto">
                                 Licensed therapists with decades of experience, dedicated to your complete transformation
                             </p>
                                                     </div>
@@ -365,11 +421,11 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-7xl px-8 text-container">
-                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-serif mb-6 leading-tight drop-shadow-2xl">
-                                Opulent <span class="text-spa-gold drop-shadow-2xl">Indulgence</span><br>
-                                <span class="text-white drop-shadow-2xl">Awaits</span>
+                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-script mb-6 leading-tight">
+                                Opulent <span class="text-herbal-beige">Indulgence</span><br>
+                                <span class="text-white">Awaits</span>
                             </h1>
-                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose drop-shadow-2xl max-w-5xl mx-auto">
+                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose max-w-5xl mx-auto">
                                 Step into a world where every detail is crafted for your ultimate comfort and rejuvenation
                             </p>
                         </div>
@@ -384,11 +440,11 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="text-center text-white max-w-7xl px-8 text-container">
-                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-serif mb-6 leading-tight drop-shadow-2xl">
-                                Love's <span class="text-spa-purple drop-shadow-2xl">Sanctuary</span><br>
-                                <span class="text-white drop-shadow-2xl">Together</span>
+                            <h1 class="text-7xl md:text-8xl lg:text-9xl font-serif mb-6 leading-tight">
+                                Love's <span class="text-herbal-beige">Sanctuary</span><br>
+                                <span class="text-white">Together</span>
                             </h1>
-                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose drop-shadow-2xl max-w-5xl mx-auto">
+                            <p class="text-3xl md:text-4xl lg:text-5xl mb-16 text-white font-medium leading-loose max-w-5xl mx-auto">
                                 Create unforgettable moments of connection and intimacy in our couples' retreat
                             </p>
                                 </div>
@@ -399,41 +455,38 @@
                 <!-- Fixed Buttons - Stay in same position -->
                 <div class="fixed-buttons">
                     <div class="flex flex-col sm:flex-row gap-8 justify-center">
-                        <a href="booking.html" class="group bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-24 py-10 rounded-full font-black tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-3xl drop-shadow-2xl border-2 border-purple-400 hover:border-purple-300 hover:bg-gradient-to-r hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 animate-pulse flex items-center justify-center">
+                        <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-24 py-10 rounded-full font-black tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-3xl border-2 border-herbal-beige hover:border-herbal-beige-light flex items-center justify-center">
                             Book Now
                         </a>
-                        <a href="services.html" class="group bg-white/20 backdrop-blur-md border-2 border-white text-white px-20 py-8 rounded-full hover:bg-white hover:text-spa-charcoal transition-all duration-300 text-2xl font-bold tracking-wide uppercase drop-shadow-xl flex items-center justify-center">
+                        <a href="services.html" class="group bg-white/20 backdrop-blur-md border-2 border-white text-white px-20 py-8 rounded-full hover:bg-white hover:text-earth-charcoal transition-all duration-300 text-2xl font-bold tracking-wide uppercase flex items-center justify-center">
                             View Services
                                 </a>
                             </div>
                         </div>
                 
                 <!-- Decorative frame -->
-                <div class="absolute -inset-8 border-2 border-spa-gold/30 rounded-[3rem] pointer-events-none"></div>
+                <div class="absolute -inset-8 border-2 border-wood-brown/30 rounded-[3rem] pointer-events-none"></div>
                 
                 <!-- Floating decorative elements -->
-                <div class="absolute -top-8 -right-8 w-40 h-40 bg-spa-gold/20 rounded-full blur-3xl"></div>
-                <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-spa-purple/15 rounded-full blur-3xl"></div>
-                <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-spa-gold/10 rounded-full blur-2xl"></div>
-                <div class="absolute top-1/3 right-1/4 w-32 h-32 bg-spa-purple/10 rounded-full blur-2xl"></div>
+                <div class="absolute -top-8 -right-8 w-40 h-40 bg-wood-brown/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-healing-green/15 rounded-full blur-3xl"></div>
+                <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-wood-brown/10 rounded-full blur-2xl"></div>
+                <div class="absolute top-1/3 right-1/4 w-32 h-32 bg-healing-green/10 rounded-full blur-2xl"></div>
                 </div>
             </div>
         </section>
 
     <!-- Seasonal Offer -->
-    <section class="py-24 bg-spa-cream relative overflow-hidden">
+    <section class="py-24 bg-ivory-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-16">
-                <div class="inline-block mb-8">
-                    <img src="Icons/Spa_01-01.png" alt="Spa Icon" class="w-20 h-20 mx-auto">
-                                            </div>
-                <h2 class="text-5xl md:text-7xl font-serif text-spa-charcoal mb-8">
-                    Autumn <span class="text-spa-gold">Renewal</span>
+                <h2 class="text-5xl md:text-7xl font-script text-earth-charcoal mb-8">
+                    Autumn <span class="text-wood-brown">Renewal</span>
                 </h2>
-                <p class="text-2xl md:text-3xl text-spa-gray font-light mb-12 leading-relaxed max-w-4xl mx-auto">
-                    Transform your wellness journey with our exclusive <span class="font-medium text-spa-purple">Seasonal Package</span>
+                <p class="text-2xl md:text-3xl text-earth-gray font-medium mb-12 leading-relaxed max-w-4xl mx-auto">
+                    Transform your wellness journey with our exclusive <span class="font-semibold text-wood-brown">Seasonal Package</span>
                 </p>
-                <a href="booking.html" class="inline-block bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl">
+                <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
                     Book Now
                                                                         </a>
                                                                     </div>
@@ -447,27 +500,24 @@
                 <div class="space-y-10">
                     <div class="space-y-8">
                         <div class="inline-block mb-8">
-                            <img src="Icons/Spa_01-02.png" alt="Spa Treatment Icon" class="w-16 h-16">
                                                                     </div>
-                        <h2 class="text-5xl md:text-7xl font-serif text-spa-charcoal leading-tight">
-                            <span class="text-spa-purple">Premium</span><br>
-                            <span class="text-spa-charcoal">Spa Treatment</span>
+                        <h2 class="text-5xl md:text-7xl font-script text-earth-charcoal leading-tight">
+                            <span class="text-wood-brown">Premium</span><br>
+                            <span class="text-earth-charcoal">Spa Treatment</span>
                         </h2>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-6">
-                                <img src="Icons/Spa_01-03.png" alt="Check Icon" class="w-6 h-6 mt-1 flex-shrink-0">
-                                <p class="text-xl text-spa-gray font-light">60 minutes of scalp, hair, and neck care</p>
+                                <p class="text-xl text-earth-gray font-medium">60 minutes of scalp, hair, and neck care</p>
                                                                             </div>
                             <div class="flex items-start space-x-6">
-                                <img src="Icons/Spa_01-03.png" alt="Check Icon" class="w-6 h-6 mt-1 flex-shrink-0">
-                                <p class="text-xl text-spa-gray font-light">90 minutes including foot massage therapy</p>
+                                <p class="text-xl text-earth-gray font-medium">90 minutes including foot massage therapy</p>
                                                                     </div>
                                                                 </div>
-                        <p class="text-lg text-spa-gray font-light leading-relaxed">
+                        <p class="text-lg text-earth-gray font-medium leading-relaxed">
                             Popular, limited to 2 guests at a time. Book 24h in advance.
                         </p>
                                                             </div>
-                    <a href="booking.html" class="group bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
                         Reserve Now
                                                                         </a>
                                                                     </div>
@@ -476,7 +526,7 @@
                         <img src="images/anti-aging-facial-massage-2024-10-19-03-36-44-utc.jpg" 
                              alt="Premium spa treatment" 
                              class="w-full h-[500px] object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute -inset-4 border-2 border-spa-gold/30 rounded-[2rem] pointer-events-none"></div>
+                        <div class="absolute -inset-4 border-2 border-wood-brown/30 rounded-[2rem] pointer-events-none"></div>
                                                                 </div>
                                                                     </div>
                                                                             </div>
@@ -485,22 +535,19 @@
     </section>
 
     <!-- Events -->
-    <section class="py-32 bg-spa-cream relative overflow-hidden">
+    <section class="py-32 bg-ivory-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <div class="max-w-4xl mx-auto space-y-12">
-                <div class="inline-block mb-8">
-                    <img src="Icons/Spa_01-04.png" alt="Events Icon" class="w-20 h-20 mx-auto">
-                                                                </div>
-                <h2 class="text-5xl md:text-7xl font-serif text-spa-charcoal">
-                    Special <span class="text-spa-purple">Events</span>
+                <h2 class="text-5xl md:text-7xl font-script text-earth-charcoal">
+                    Special <span class="text-wood-brown">Events</span>
                 </h2>
-                <p class="text-2xl md:text-3xl text-spa-gray font-light leading-relaxed">
-                    Celebrate your special day with our <span class="font-medium text-spa-gold">Spa Party</span>
+                <p class="text-2xl md:text-3xl text-earth-gray font-medium leading-relaxed">
+                    Celebrate your special day with our <span class="font-semibold text-wood-brown">Spa Party</span>
                 </p>
-                <p class="text-xl text-spa-gray font-light leading-relaxed max-w-2xl mx-auto">
+                <p class="text-xl text-earth-gray font-medium leading-relaxed max-w-2xl mx-auto">
                     Perfect for weddings, birthdays, and special events.
                 </p>
-                <a href="booking.html" class="group bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
+                <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
                     Book Now
                                                                         </a>
                                                                     </div>
@@ -511,79 +558,69 @@
     <section class="py-32 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-20">
-                <div class="inline-block mb-8">
-                    <img src="Icons/Spa_01-05.png" alt="Benefits Icon" class="w-20 h-20 mx-auto">
-                                                                    </div>
-                <h2 class="text-5xl md:text-7xl font-serif text-spa-charcoal mb-16">
-                    <span class="text-spa-purple">Benefits</span>
+                <h2 class="text-5xl md:text-7xl font-script text-earth-charcoal mb-16">
+                    <span class="text-wood-brown">Benefits</span>
                 </h2>
                 <div class="grid md:grid-cols-3 gap-16">
                     <div class="text-center group">
-                        <div class="w-24 h-24 bg-gradient-to-br from-spa-purple/10 to-purple-100/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <img src="Icons/Spa_01-06.png" alt="Pain Relief Icon" class="w-12 h-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                                                             </div>
-                        <h3 class="text-2xl font-serif font-medium text-spa-charcoal mb-6">Alleviate Aches and Pains</h3>
-                        <p class="text-spa-gray font-light leading-relaxed text-lg">Professional massage therapy to relieve muscle tension and chronic pain</p>
+                        <h3 class="text-2xl font-raleway font-medium text-spa-charcoal mb-6">Alleviate Aches and Pains</h3>
+                        <p class="text-spa-gray font-medium leading-relaxed text-lg">Professional massage therapy to relieve muscle tension and chronic pain</p>
                                                                     </div>
                     <div class="text-center group">
-                        <div class="w-24 h-24 bg-gradient-to-br from-spa-purple/10 to-purple-100/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <img src="Icons/Spa_01-07.png" alt="Stress Relief Icon" class="w-12 h-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                                                 </div>
-                        <h3 class="text-2xl font-serif font-medium text-spa-charcoal mb-6">Reduce Stress Levels</h3>
-                        <p class="text-spa-gray font-light leading-relaxed text-lg">Lower cortisol levels and promote deep relaxation</p>
+                        <h3 class="text-2xl font-raleway font-medium text-spa-charcoal mb-6">Reduce Stress Levels</h3>
+                        <p class="text-spa-gray font-medium leading-relaxed text-lg">Lower cortisol levels and promote deep relaxation</p>
                                                             </div>
                     <div class="text-center group">
-                        <div class="w-24 h-24 bg-gradient-to-br from-spa-purple/10 to-purple-100/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <img src="Icons/Spa_01-08.png" alt="Wellness Icon" class="w-12 h-12">
+                        <div class="w-24 h-24 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                                                         </div>
-                        <h3 class="text-2xl font-serif font-medium text-spa-charcoal mb-6">Look and Feel Your Best</h3>
-                        <p class="text-spa-gray font-light leading-relaxed text-lg">Enhanced skin health and increased confidence</p>
+                        <h3 class="text-2xl font-raleway font-medium text-spa-charcoal mb-6">Look and Feel Your Best</h3>
+                        <p class="text-spa-gray font-medium leading-relaxed text-lg">Enhanced skin health and increased confidence</p>
                                                     </div>
                                                 </div>
-                <div class="flex flex-col sm:flex-row gap-8 justify-center mt-20">
-                    <a href="services.html" class="group bg-white/20 backdrop-blur-md border-2 border-spa-purple text-spa-purple px-12 py-4 rounded-full font-bold tracking-wide uppercase hover:bg-spa-purple hover:text-white transition-all duration-300 text-lg">
-                        View Services
-                    </a>
-                    <a href="booking.html" class="group bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl">
-                        Book Now
-                    </a>
-                                                                                        </div>
-                                                                                    </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-8 justify-center mt-20">
+                <a href="services.html" class="group bg-white/20 backdrop-blur-md border-2 border-wood-brown text-wood-brown px-12 py-4 rounded-full font-bold tracking-wide uppercase hover:bg-wood-brown hover:text-white transition-all duration-300 text-lg">
+                    View Services
+                </a>
+                <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl">
+                    Book Now
+                </a>
+            </div>
                                                                                 </div>
     </section>
 
     <!-- Why Crystal Spa -->
-    <section class="py-32 bg-spa-cream relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <section class="py-32 bg-ivory-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="space-y-10">
                     <div class="inline-block mb-8">
-                        <img src="Icons/Spa_01-09.png" alt="Philosophy Icon" class="w-16 h-16">
                                                                             </div>
-                    <h2 class="text-5xl md:text-7xl font-serif text-spa-charcoal leading-tight">
-                        Why <span class="text-spa-purple">Crystal Spa</span>
+                    <h2 class="text-5xl md:text-7xl font-script text-earth-charcoal leading-tight">
+                        Why <span class="text-wood-brown">Crystal Spa</span>
                     </h2>
-                    <p class="text-2xl text-spa-gray font-light leading-relaxed">
+                    <p class="text-2xl text-spa-gray font-medium leading-relaxed">
                         Your body works hard for you — it's time to return the favor.
                     </p>
                     <div class="space-y-8">
                         <p class="text-xl font-medium text-spa-charcoal">We offer:</p>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-6">
-                                <img src="Icons/Spa_01-10.png" alt="Check Icon" class="w-6 h-6 flex-shrink-0">
-                                <span class="text-xl font-light text-spa-gray">Customized massage options</span>
+                                <span class="text-xl font-medium text-spa-gray">Customized massage options</span>
                                                                                         </div>
                             <div class="flex items-center space-x-6">
-                                <img src="Icons/Spa_01-10.png" alt="Check Icon" class="w-6 h-6 flex-shrink-0">
-                                <span class="text-xl font-light text-spa-gray">Cutting-edge spa technology</span>
+                                <span class="text-xl font-medium text-spa-gray">Cutting-edge spa technology</span>
                                                                                     </div>
                             <div class="flex items-center space-x-6">
-                                <img src="Icons/Spa_01-10.png" alt="Check Icon" class="w-6 h-6 flex-shrink-0">
-                                <span class="text-xl font-light text-spa-gray">Natural, therapeutic-grade products</span>
+                                <span class="text-xl font-medium text-spa-gray">Natural, therapeutic-grade products</span>
                                                                                 </div>
                                                                             </div>
                     </div>
-                    <a href="booking.html" class="group bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-16 py-6 rounded-full font-bold tracking-wider uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xl inline-block">
                         Book Now
                     </a>
                                                                                         </div>
@@ -592,7 +629,7 @@
                         <img src="images/esthetician-giving-a-facial-massage-with-cream-on-2025-03-05-04-30-16-utc.jpg" 
                              alt="Spa treatment with natural products" 
                              class="w-full h-[500px] object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute -inset-4 border-2 border-spa-gold/30 rounded-[2rem] pointer-events-none"></div>
+                        <div class="absolute -inset-4 border-2 border-wood-brown/30 rounded-[2rem] pointer-events-none"></div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -607,30 +644,30 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20">
                 <div class="inline-block mb-6">
-                    <span class="text-sm font-medium text-spa-purple tracking-widest uppercase">Simple Process</span>
+                    <span class="text-sm font-medium text-wood-brown tracking-widest uppercase">Simple Process</span>
                                                                 </div>
-                <h2 class="text-5xl md:text-6xl font-display font-light text-gradient mb-16">
+                <h2 class="text-5xl md:text-6xl font-raleway font-light text-gradient mb-16">
                     3 Easy Steps
                                                                         </h2>
                 <div class="grid md:grid-cols-3 gap-16">
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple to-spa-light-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg">1</div>
-                        <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-6">Choose your service</h3>
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown to-wood-brown-light text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg">1</div>
+                        <h3 class="text-2xl font-raleway font-medium text-spa-charcoal mb-6">Choose your service</h3>
                         <p class="text-spa-gray font-light leading-relaxed text-lg">Browse our range of massage and facial treatments</p>
                                                                     </div>
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple to-spa-light-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg">2</div>
-                        <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-6">Add enhancements</h3>
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown to-wood-brown-light text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg">2</div>
+                        <h3 class="text-2xl font-raleway font-medium text-spa-charcoal mb-6">Add enhancements</h3>
                         <p class="text-spa-gray font-light leading-relaxed text-lg">Customize your experience with optional add-ons</p>
                                                                 </div>
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple to-spa-light-purple text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg">3</div>
-                        <h3 class="text-2xl font-display font-medium text-spa-charcoal mb-6">Reserve your experience</h3>
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown to-wood-brown-light text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-8 group-hover:scale-110 transition-all duration-300 shadow-lg">3</div>
+                        <h3 class="text-2xl font-raleway font-medium text-spa-charcoal mb-6">Reserve your experience</h3>
                         <p class="text-spa-gray font-light leading-relaxed text-lg">Book your appointment and prepare for relaxation</p>
                                                             </div>
                                                         </div>
                 <div class="mt-20">
-                    <a href="booking.html" class="group bg-gradient-to-r from-spa-purple to-spa-light-purple text-white px-12 py-5 rounded-full font-medium tracking-wide uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm inline-block">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-12 py-5 rounded-full font-medium tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-sm inline-block">
                         Book Now
                                                                     </a>
                                                                 </div>
@@ -644,39 +681,39 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20">
                 <div class="inline-block mb-6">
-                    <span class="text-sm font-medium text-spa-purple tracking-widest uppercase">What to Expect</span>
+                    <span class="text-sm font-medium text-wood-brown tracking-widest uppercase">What to Expect</span>
                                                                 </div>
-                <h2 class="text-5xl md:text-6xl font-display font-light text-gradient mb-16">
+                <h2 class="text-5xl md:text-6xl font-raleway font-light text-gradient mb-16">
                     Expect
                 </h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple/10 to-spa-light-purple/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
                             <span class="text-3xl">🧼</span>
                                                                 </div>
-                        <h3 class="text-lg font-display font-medium text-spa-charcoal mb-4">Clean environment & safety protocols</h3>
+                        <h3 class="text-lg font-raleway font-medium text-spa-charcoal mb-4">Clean environment & safety protocols</h3>
                                                             </div>
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple/10 to-spa-light-purple/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
                             <span class="text-3xl">⭐</span>
                                                         </div>
-                        <h3 class="text-lg font-display font-medium text-spa-charcoal mb-4">Elevated customer experience</h3>
+                        <h3 class="text-lg font-raleway font-medium text-spa-charcoal mb-4">Elevated customer experience</h3>
                                                     </div>
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple/10 to-spa-light-purple/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
                             <span class="text-3xl">🌿</span>
                                                                 </div>
-                        <h3 class="text-lg font-display font-medium text-spa-charcoal mb-4">Organic essential oils</h3>
+                        <h3 class="text-lg font-raleway font-medium text-spa-charcoal mb-4">Organic essential oils</h3>
                                                             </div>
                     <div class="text-center group card-hover">
-                        <div class="w-20 h-20 bg-gradient-to-br from-spa-purple/10 to-spa-light-purple/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
+                        <div class="w-20 h-20 bg-gradient-to-br from-wood-brown/10 to-herbal-beige/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-300">
                             <span class="text-3xl">👩‍⚕️</span>
                                                                 </div>
-                        <h3 class="text-lg font-display font-medium text-spa-charcoal mb-4">Expert, customized care</h3>
+                        <h3 class="text-lg font-raleway font-medium text-spa-charcoal mb-4">Expert, customized care</h3>
                                                                 </div>
                                                                 </div>
                 <div class="mt-20">
-                    <a href="booking.html" class="group bg-gradient-to-r from-spa-purple to-spa-light-purple text-white px-12 py-5 rounded-full font-medium tracking-wide uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm inline-block">
+                    <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-12 py-5 rounded-full font-medium tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-sm inline-block">
                         Book Now
                                                                     </a>
                                                                 </div>
@@ -692,13 +729,13 @@
                 <div class="inline-block mb-8">
                     <span class="text-sm font-medium text-white/80 tracking-widest uppercase">Perfect Gift</span>
                                                                 </div>
-                <h2 class="text-5xl md:text-7xl font-display font-light mb-12">
+                <h2 class="text-5xl md:text-7xl font-raleway font-light mb-12">
                     Gift Cards
                 </h2>
                 <p class="text-2xl font-light mb-16">
                     Give the gift of wellness.
                 </p>
-                <a href="gift-card.html" class="group bg-white text-spa-purple px-12 py-5 rounded-full font-medium tracking-wide uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm inline-block">
+                <a href="gift-card.html" class="group bg-white text-wood-brown px-12 py-5 rounded-full font-medium tracking-wide uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm inline-block">
                     Purchase Gift Card
                                                                     </a>
                                                                 </div>
@@ -706,24 +743,24 @@
     </section>
 
     <!-- Contact Info -->
-    <section class="py-24 bg-gradient-to-br from-spa-purple to-spa-dark-purple text-white relative overflow-hidden">
+    <section class="py-24 bg-gradient-to-br from-wood-brown to-wood-brown-dark text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/5"></div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-16 text-center">
                 <div class="space-y-8">
-                    <h3 class="text-2xl font-display font-medium mb-8">📍 Location I</h3>
+                    <h3 class="text-2xl font-raleway font-medium mb-8">📍 Location I</h3>
                     <div class="space-y-4">
                         <p class="text-xl font-light">102 Elden St, Suite 18</p>
                         <p class="text-xl font-light">Herndon, VA</p>
-                        <p class="text-2xl font-semibold text-spa-gold">571-352-4502</p>
+                        <p class="text-2xl font-semibold text-herbal-beige">571-352-4502</p>
                                                                 </div>
                                                                 </div>
                 <div class="space-y-8">
-                    <h3 class="text-2xl font-display font-medium mb-8">📍 Location II</h3>
+                    <h3 class="text-2xl font-raleway font-medium mb-8">📍 Location II</h3>
                     <div class="space-y-4">
                         <p class="text-xl font-light">150 Elden St, Suite 150</p>
                         <p class="text-xl font-light">Herndon, VA</p>
-                        <p class="text-2xl font-semibold text-spa-gold">571-519-9086</p>
+                        <p class="text-2xl font-semibold text-herbal-beige">571-519-9086</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -731,50 +768,125 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-spa-charcoal text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-12">
+    <footer class="bg-gradient-to-br from-earth-charcoal via-wood-brown-dark to-forest-green text-white py-24 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-herbal-beige via-wood-brown to-herbal-beige"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16">
+                <!-- Brand Section -->
                 <div class="space-y-6">
-                    <img src="images/crystal-spa-logo-new.webp" 
-                         alt="Crystal Massage Spa Logo" 
-                         class="h-16 w-auto object-contain">
-                    <p class="text-spa-gray font-light text-sm leading-relaxed">Your wellness destination in Herndon, VA</p>
-                                                </div>
-                                                        <div>
-                    <h4 class="text-sm font-medium mb-6 tracking-wide uppercase">Services</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="services.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Massage Therapy</a></li>
-                        <li><a href="services.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Facial Treatments</a></li>
-                        <li><a href="services.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Spa Packages</a></li>
-                    </ul>
-                                                        </div>
+                    <div class="flex items-center space-x-3">
+                        <img src="images/crystal-spa-logo-new.webp" 
+                             alt="Crystal Massage Spa Logo" 
+                             class="h-20 w-auto object-contain">
+                        <div>
+                            <h3 class="text-lg font-raleway font-semibold text-herbal-beige">Crystal Massage Spa</h3>
+                            <p class="text-xs text-herbal-beige/80 font-light">Wellness & Restoration</p>
+                        </div>
+                    </div>
+                    <p class="text-herbal-beige/90 font-light text-sm leading-relaxed">Your sanctuary for healing and rejuvenation in Herndon, VA. Experience the perfect blend of traditional techniques and modern wellness.</p>
+                    <div class="flex space-x-4">
+                        <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white px-4 py-2 rounded-full font-bold tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-xs">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services Section -->
                 <div>
-                    <h4 class="text-sm font-medium mb-6 tracking-wide uppercase">Quick Links</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="booking.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Book Now</a></li>
-                        <li><a href="gift-card.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Gift Cards</a></li>
-                        <li><a href="contact.html" class="text-spa-gray hover:text-white transition-colors duration-300 font-light">Contact</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div>
-                    <h4 class="text-sm font-medium mb-6 tracking-wide uppercase">Contact</h4>
-                    <div class="space-y-3 text-sm text-spa-gray font-light">
-                        <p>102 Elden St, Suite 18</p>
-                        <p>Herndon, VA</p>
-                        <p>571-352-4502</p>
-                                                            </div>
-                                                    </div>
-                                                </div>
-            <div class="border-t border-spa-gray/20 mt-16 pt-8 text-center text-spa-gray text-sm font-light">
-                <p>&copy; 2024 Crystal Massage Spa. All rights reserved.</p>
-                                            </div>
-                                            </div>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Swedish Massage
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Deep Tissue
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Hot Stone Therapy
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Facial Treatments
+                        </a></li>
+                        <li><a href="services.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Couples Massage
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about-us.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            About Us
+                        </a></li>
+                        <li><a href="staff.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Our Team
+                        </a></li>
+                        <li><a href="membership.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Membership
+                        </a></li>
+                        <li><a href="benefits.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Benefits
+                        </a></li>
+                        <li><a href="gift-card.html" class="text-herbal-beige/80 hover:text-herbal-beige transition-colors duration-300 text-sm flex items-center group">
+                            <span class="w-1 h-1 bg-herbal-beige rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
+                            Gift Cards
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Section -->
+                <div>
+                    <h4 class="text-herbal-beige font-semibold mb-6 tracking-wide uppercase text-sm">Visit Us</h4>
+                    <div class="space-y-4">
+                        <div class="bg-herbal-beige/10 rounded-lg p-4 border border-herbal-beige/20">
+                            <h5 class="text-herbal-beige font-medium text-sm mb-2">Location I</h5>
+                            <p class="text-herbal-beige/80 text-xs leading-relaxed">102 Elden St, Suite 18<br>Herndon, VA 20170</p>
+                            <p class="text-herbal-beige/80 text-xs mt-2">571-352-4502</p>
+                        </div>
+                        <div class="bg-herbal-beige/10 rounded-lg p-4 border border-herbal-beige/20">
+                            <h5 class="text-herbal-beige font-medium text-sm mb-2">Location II</h5>
+                            <p class="text-herbal-beige/80 text-xs leading-relaxed">150 Elden St, Suite 150<br>Herndon, VA 20170</p>
+                            <p class="text-herbal-beige/80 text-xs mt-2">571-519-9086</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="border-t border-herbal-beige/20 mt-16 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-herbal-beige/80 text-sm">&copy; 2024 Crystal Massage Spa. All rights reserved.</p>
+                        <p class="text-herbal-beige/60 text-xs mt-1">Licensed & Insured • Professional Massage Therapy</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="privacy.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Privacy Policy</a>
+                        <a href="terms.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Terms of Service</a>
+                        <a href="contact.html" class="text-herbal-beige/60 hover:text-herbal-beige transition-colors duration-300 text-xs">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Sticky Book Now Button (Mobile Only) -->
     <div class="sticky-book-now">
         <div class="px-6 py-4">
-            <a href="booking.html" class="block w-full bg-gradient-to-r from-spa-gold to-yellow-500 text-white text-center py-4 rounded-full font-medium tracking-wide uppercase hover:bg-opacity-90 transition-all duration-300 text-sm">
+            <a href="booking.html" class="group bg-gradient-to-r from-wood-brown via-wood-brown-light to-wood-brown-dark text-white text-center py-4 rounded-full font-medium tracking-wide uppercase hover:shadow-2xl hover:scale-110 transition-all duration-300 text-sm block w-full">
                 Book Now
             </a>
     </div>
