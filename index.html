@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1D4D4F">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Crystal Spa - Massage & Beauty | Herndon</title>
     <meta name="description" content="Crystal Spa in Herndon, VA offers professional massage therapy, facial treatments, and beauty services. Book your appointment today for relaxation and rejuvenation.">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,10 +34,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <style>
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
         /* Typography from Figma Design System */
         h1 { font-size: 36px; font-weight: 500; line-height: 100%; }
@@ -38,60 +49,82 @@
         h3 { font-size: 20px; font-weight: 500; line-height: 100%; }
         h4 { font-size: 16px; font-weight: 500; line-height: 100%; }
         h5 { font-size: 15px; font-weight: 500; line-height: 100%; }
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 22px; }
+            h3 { font-size: 18px; }
+        }
+        /* Performance Optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        a, button {
+            touch-action: manipulation;
+            min-height: 44px;
+            min-width: 44px;
+        }
     </style>
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="w-full max-w-[1435px] mx-auto pt-[11px] pb-0 px-4 md:px-0 overflow-visible">
-        <div class="flex items-center gap-4 md:gap-12 h-auto md:h-auto md:min-h-[105px] pl-0 md:pl-[5px] overflow-visible">
+    <nav id="main-nav" class="w-full max-w-[1435px] mx-auto pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-0 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+        <div class="flex items-center gap-2 sm:gap-4 md:gap-8 lg:gap-12 h-auto min-h-[80px] sm:min-h-[90px] md:min-h-[105px] pl-2 sm:pl-4 md:pl-8 lg:pl-[130px] overflow-visible">
             <!-- Logo -->
-            <div class="bg-white flex flex-col gap-[10px] items-start overflow-visible pl-4 md:pl-[130px] pr-4 md:pr-8 py-2 md:py-1 w-auto md:w-[475px] shrink-0">
-                <div class="h-24 md:h-[140px] w-auto md:w-[360px] relative shrink-0 flex items-center justify-start">
-                    <a href="index.html" class="block">
-                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none">
+            <div class="flex flex-col gap-[10px] items-start overflow-visible pl-0 sm:pl-2 md:pl-4 lg:pl-[130px] pr-2 sm:pr-4 md:pr-8 py-2 md:py-1 w-auto sm:w-auto md:w-auto lg:w-[475px] shrink-0">
+                <div class="h-16 sm:h-20 md:h-24 lg:h-[140px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[360px] relative shrink-0 flex items-center justify-start">
+                    <a href="index.html" class="block" aria-label="Crystal Spa Home">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none" loading="eager" width="360" height="140">
                     </a>
                 </div>
             </div>
             
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-6 shrink-0">
+            <div class="hidden lg:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-4 xl:gap-6 shrink-0 flex-1">
                 <!-- Menu -->
-                <div class="bg-white flex font-medium gap-6 h-[44.065px] items-center leading-normal px-4 py-[10.9px] text-[17.44px] text-spa-teal shrink-0">
-                    <a href="index.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Home</a>
-                    <a href="services.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Services</a>
-                    <a href="about.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">About Us</a>
-                    <a href="membership.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Membership</a>
-                    <a href="contact.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Contact</a>
-                </div>
-                
-                <!-- CTA Button -->
+                <div class="flex font-medium gap-4 xl:gap-6 h-[44.065px] items-center leading-normal px-2 xl:px-4 py-[10.9px] text-base xl:text-[17.44px] text-spa-teal shrink-0">
+                    <a href="index.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Home</a>
+                    <a href="services.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Services</a>
+                    <a href="about.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">About Us</a>
+                    <a href="membership.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Membership</a>
+                    <a href="contact.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Contact</a>
+            </div>
+            
+            <!-- CTA Button -->
                 <div class="flex flex-col items-start p-0 shrink-0 overflow-visible">
-                    <div class="h-[69.686px] w-[242.506px] relative shrink-0 group">
-                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all">
-                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors"></div>
-                            <span class="relative text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors">Contact Us</span>
+                    <div class="h-[60px] xl:h-[69.686px] w-[200px] xl:w-[242.506px] relative shrink-0 group">
+                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all duration-200">
+                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors duration-200"></div>
+                            <span class="relative text-xl xl:text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors duration-200">Contact Us</span>
                         </a>
                     </div>
                 </div>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden ml-auto">
-                <svg class="w-6 h-6 text-spa-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-button" class="lg:hidden ml-auto p-2 touch-manipulation focus:outline-none focus:ring-2 focus:ring-spa-teal focus:ring-offset-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6 text-spa-teal transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 text-spa-teal hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-6 pb-4">
-            <div class="flex flex-col space-y-4">
-                <a href="index.html" class="text-spa-teal font-medium text-[17.44px]">Home</a>
-                <a href="services.html" class="text-spa-teal font-medium text-[17.44px]">Services</a>
-                <a href="about.html" class="text-spa-teal font-medium text-[17.44px]">About Us</a>
-                <a href="membership.html" class="text-spa-teal font-medium text-[17.44px]">Membership</a>
-                <a href="contact.html" class="text-spa-teal font-medium text-[17.44px]">Contact</a>
-                <a href="contact.html" class="px-6 py-3 border-2 border-white text-spa-teal rounded-[10px] font-medium text-center">
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 px-2 border-t border-spa-teal/10 bg-white/80 backdrop-blur-md">
+            <div class="flex flex-col space-y-2 pt-4">
+                <a href="index.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Home</a>
+                <a href="services.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Services</a>
+                <a href="about.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">About Us</a>
+                <a href="membership.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Membership</a>
+                <a href="contact.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Contact</a>
+                <a href="contact.html" class="px-6 py-3 border-2 border-spa-teal text-spa-teal rounded-[10px] font-medium text-center touch-manipulation mt-2 hover:bg-spa-teal hover:text-white transition-all duration-200">
                     Contact Us
                 </a>
             </div>
@@ -99,51 +132,63 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="w-full pt-12 md:pt-[162px] pb-12 md:pb-12 relative overflow-hidden">
+    <section class="w-full pt-36 sm:pt-40 md:pt-[200px] pb-12 md:pb-12 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-white via-spa-secondary/30 to-spa-bg"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-spa-third/10 via-transparent to-transparent"></div>
         <div class="relative w-full max-w-[1435px] mx-auto px-4 md:px-0">
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[176px] h-auto md:h-[388px]">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[176px] h-auto md:h-[388px] pt-8 sm:pt-12 md:pt-16">
                 <!-- Left Column - Text -->
                 <div class="flex flex-col gap-6 md:gap-[50px] items-start w-full md:w-[502px]">
                     <h1 class="text-3xl md:text-[36px] font-medium leading-[100%] text-spa-teal md:w-[286.492px]">
                         Rejuvenate Your Mind, Body & Soul
                     </h1>
-                    
+                
                     <div class="flex gap-[13.514px] h-auto md:h-[87px] items-center justify-center w-full">
                         <p class="basis-0 grow min-h-px min-w-px text-base md:text-[21.622px] font-medium leading-normal text-spa-teal/90">
-                            Discover the art of complete restoration through our healing massage therapy and custom facial treatments, where expert care meets personalized attention in every moment.
-                        </p>
+                    Discover the art of complete restoration through our healing massage therapy and custom facial treatments, where expert care meets personalized attention in every moment.
+                </p>
                     </div>
                     
                     <div class="h-auto md:h-[67.569px] w-full md:w-[398.656px] relative group">
                         <div class="absolute bg-spa-teal inset-0 rounded-[10px] shadow-lg group-hover:shadow-xl group-hover:bg-spa-teal-light transition-all"></div>
                         <a href="contact.html" class="absolute bottom-[20%] left-0 right-0 top-[20%] flex items-center justify-center">
                             <span class="text-xl md:text-[31.49px] font-normal leading-normal text-white text-center">Book Appointment</span>
-                        </a>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Right Column - Image -->
+            </div>
+            
+            <!-- Right Column - Image -->
                 <div class="h-auto md:h-[353px] w-full md:w-[528px] rounded-[30px] overflow-hidden shrink-0 relative shadow-2xl">
                     <div class="absolute inset-0 bg-gradient-to-br from-spa-third/20 to-transparent rounded-[30px] pointer-events-none z-10"></div>
-                    <img src="assets/images/hero-massage.jpg" alt="Relaxing massage therapy at Crystal Spa" class="absolute inset-0 w-full h-full object-cover object-[50%_50%] rounded-[30px] pointer-events-none">
+                    <img src="assets/images/hero-massage.jpg" alt="Relaxing massage therapy at Crystal Spa" class="w-full h-full object-cover object-center rounded-[30px]" loading="eager" fetchpriority="high" width="528" height="353">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="w-full bg-gradient-to-br from-spa-teal to-spa-teal-light py-12 md:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-medium text-white mb-3">Join Our Wellness Community</h2>
+            <p class="text-white/90 mb-6 text-sm sm:text-base">Be the first to receive exclusive offers, self-care tips, and special spa perks</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Email Address" required class="flex-1 px-4 py-3 rounded-lg text-spa-teal placeholder-spa-teal/60 focus:outline-none focus:ring-2 focus:ring-spa-secondary focus:ring-offset-2 text-sm sm:text-base">
+                <button type="submit" class="px-6 py-3 bg-spa-secondary text-spa-teal font-medium rounded-lg hover:bg-spa-secondary/90 transition-colors duration-200 whitespace-nowrap text-sm sm:text-base">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-spa-teal text-white mt-20 relative overflow-hidden rounded-t-3xl">
+    <footer class="bg-spa-teal text-white mt-0 relative overflow-hidden rounded-t-3xl">
         <!-- Decorative top border -->
         <div class="h-1 bg-gradient-to-r from-spa-secondary via-spa-third to-spa-secondary rounded-t-3xl"></div>
         
-        <div class="container mx-auto px-6 py-16">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-6 py-8 sm:py-12 md:py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
                 <!-- Brand Column -->
                 <div class="md:col-span-1">
                     <div class="mb-6">
-                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg" loading="lazy" width="80" height="80">
                     </div>
                     <p class="text-spa-secondary leading-relaxed mb-4">Professional massage therapy and beauty treatments in Herndon, Virginia. Experience relaxation and rejuvenation with our expert therapists.</p>
                 </div>
@@ -163,10 +208,6 @@
                         <li><a href="about.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
                             <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
                             About Us
-                        </a></li>
-                        <li><a href="membership.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
-                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
-                            Membership
                         </a></li>
                         <li><a href="contact.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
                             <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
@@ -216,11 +257,25 @@
                 </div>
             </div>
             
+            <!-- Accessibility & Additional Info -->
+            <div class="border-t border-white/20 pt-6 sm:pt-8 mb-6 sm:mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-white/80">
+                    <div>
+                        <p class="text-spa-secondary font-medium mb-2">Accessibility</p>
+                        <p>Wheelchair access available. Please call ahead for assistance.</p>
+                    </div>
+                    <div>
+                        <p class="text-spa-secondary font-medium mb-2">Gift Cards</p>
+                        <a href="https://giftup.app/place-order/5fcbf7bd-46e2-491b-fb13-08dcf47882f6" class="hover:text-spa-secondary transition-colors underline">Purchase Gift Cards Online</a>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Bottom Bar -->
-            <div class="border-t border-white/20 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-spa-secondary text-sm">&copy; 2025 Crystal Massage Spa, LLC. All rights reserved.</p>
-                    <div class="flex items-center gap-6 text-sm text-white/70">
+            <div class="border-t border-white/20 pt-6 sm:pt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
+                    <p class="text-spa-secondary text-xs sm:text-sm">&copy; 2025 Crystal Massage Spa, LLC. All rights reserved.</p>
+                    <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-white/70">
                         <span class="text-spa-secondary">Relax • Restore • Rejuvenate</span>
                     </div>
                 </div>
@@ -230,12 +285,91 @@
 
     <!-- Mobile Menu Script -->
     <script>
+        (function() {
+            'use strict';
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
         
-        mobileMenuButton.addEventListener('click', () => {
+            if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
-        });
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+                    
+                    // Prevent body scroll when menu is open
+                    if (!isHidden) {
+                        document.body.style.overflow = '';
+                    } else {
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+                
+                // Close menu when clicking on a link
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        })();
     </script>
+    
+    <!-- Scroll Hide/Show Navigation Script -->
+    <script>
+        (function() {
+            'use strict';
+            const nav = document.getElementById('main-nav');
+            const scrollThreshold = 100; // Scroll distance before hiding
+            
+            if (!nav) return;
+            
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop < scrollThreshold) {
+                    // At the top of the page - show nav
+                    nav.classList.remove('nav-hidden');
+                    nav.classList.add('nav-visible');
+                } else {
+                    // Scrolled down - hide nav
+                    nav.classList.remove('nav-visible');
+                    nav.classList.add('nav-hidden');
+                }
+            }
+            
+            // Throttle scroll events for better performance
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+            
+            // Initialize nav as visible
+            nav.classList.add('nav-visible');
+        })();
+    </script>
+    
+    <style>
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+        .nav-visible {
+            transform: translateY(0);
+        }
+    </style>
 </body>
 </html>

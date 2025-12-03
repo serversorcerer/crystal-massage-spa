@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1D4D4F">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Contact - Crystal Spa | Herndon</title>
     <meta name="description" content="Contact Crystal Spa in Herndon, VA. We have two convenient locations. Call us to book your appointment today.">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -27,10 +33,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <style>
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
         /* Typography from Figma Design System */
         h1 { font-size: 36px; font-weight: 500; line-height: 100%; }
@@ -38,60 +48,82 @@
         h3 { font-size: 20px; font-weight: 500; line-height: 100%; }
         h4 { font-size: 16px; font-weight: 500; line-height: 100%; }
         h5 { font-size: 15px; font-weight: 500; line-height: 100%; }
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 22px; }
+            h3 { font-size: 18px; }
+        }
+        /* Performance Optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        a, button {
+            touch-action: manipulation;
+            min-height: 44px;
+            min-width: 44px;
+        }
     </style>
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="w-full max-w-[1435px] mx-auto pt-[11px] pb-0 px-4 md:px-0">
-        <div class="flex items-center gap-4 md:gap-12 h-auto md:h-auto md:min-h-[105px] pl-0 md:pl-[5px] overflow-visible">
+    <nav id="main-nav" class="w-full max-w-[1435px] mx-auto pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-0 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+        <div class="flex items-center gap-2 sm:gap-4 md:gap-8 lg:gap-12 h-auto min-h-[80px] sm:min-h-[90px] md:min-h-[105px] pl-2 sm:pl-4 md:pl-8 lg:pl-[130px] overflow-visible">
             <!-- Logo -->
-            <div class="bg-white flex flex-col gap-[10px] items-start overflow-visible pl-4 md:pl-[130px] pr-4 md:pr-8 py-2 md:py-1 w-auto md:w-[475px] shrink-0">
-                <div class="h-24 md:h-[140px] w-auto md:w-[360px] relative shrink-0 flex items-center justify-start">
-                    <a href="index.html" class="block">
-                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none">
+            <div class="flex flex-col gap-[10px] items-start overflow-visible pl-0 sm:pl-2 md:pl-4 lg:pl-[130px] pr-2 sm:pr-4 md:pr-8 py-2 md:py-1 w-auto sm:w-auto md:w-auto lg:w-[475px] shrink-0">
+                <div class="h-16 sm:h-20 md:h-24 lg:h-[140px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[360px] relative shrink-0 flex items-center justify-start">
+                    <a href="index.html" class="block" aria-label="Crystal Spa Home">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none" loading="eager" width="360" height="140">
                     </a>
                 </div>
             </div>
             
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-6 shrink-0">
+            <div class="hidden lg:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-4 xl:gap-6 shrink-0 flex-1">
                 <!-- Menu -->
-                <div class="bg-white flex font-medium gap-6 h-[44.065px] items-center leading-normal px-4 py-[10.9px] text-[17.44px] text-spa-teal shrink-0">
-                    <a href="index.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Home</a>
-                    <a href="services.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Services</a>
-                    <a href="about.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">About Us</a>
-                    <a href="membership.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Membership</a>
-                    <a href="contact.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Contact</a>
+                <div class="flex font-medium gap-4 xl:gap-6 h-[44.065px] items-center leading-normal px-2 xl:px-4 py-[10.9px] text-base xl:text-[17.44px] text-spa-teal shrink-0">
+                    <a href="index.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Home</a>
+                    <a href="services.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Services</a>
+                    <a href="about.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">About Us</a>
+                    <a href="membership.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Membership</a>
+                    <a href="contact.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Contact</a>
                 </div>
                 
                 <!-- CTA Button -->
                 <div class="flex flex-col items-start p-0 shrink-0 overflow-visible">
-                    <div class="h-[69.686px] w-[242.506px] relative shrink-0 group">
-                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all">
-                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors"></div>
-                            <span class="relative text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors">Contact Us</span>
+                    <div class="h-[60px] xl:h-[69.686px] w-[200px] xl:w-[242.506px] relative shrink-0 group">
+                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all duration-200">
+                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors duration-200"></div>
+                            <span class="relative text-xl xl:text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors duration-200">Contact Us</span>
                         </a>
                     </div>
                 </div>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden ml-auto">
-                <svg class="w-6 h-6 text-spa-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-button" class="lg:hidden ml-auto p-2 touch-manipulation focus:outline-none focus:ring-2 focus:ring-spa-teal focus:ring-offset-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6 text-spa-teal transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 text-spa-teal hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-6 pb-4">
-            <div class="flex flex-col space-y-4">
-                <a href="index.html" class="text-spa-teal font-medium text-[17.44px]">Home</a>
-                <a href="services.html" class="text-spa-teal font-medium text-[17.44px]">Services</a>
-                <a href="about.html" class="text-spa-teal font-medium text-[17.44px]">About Us</a>
-                <a href="membership.html" class="text-spa-teal font-medium text-[17.44px]">Membership</a>
-                <a href="contact.html" class="text-spa-teal font-medium text-[17.44px]">Contact</a>
-                <a href="contact.html" class="px-6 py-3 border-2 border-white text-spa-teal rounded-[10px] font-medium text-center">
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 px-2 border-t border-spa-teal/10 bg-white/80 backdrop-blur-md">
+            <div class="flex flex-col space-y-2 pt-4">
+                <a href="index.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Home</a>
+                <a href="services.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Services</a>
+                <a href="about.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">About Us</a>
+                <a href="membership.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Membership</a>
+                <a href="contact.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Contact</a>
+                <a href="contact.html" class="px-6 py-3 border-2 border-spa-teal text-spa-teal rounded-[10px] font-medium text-center touch-manipulation mt-2 hover:bg-spa-teal hover:text-white transition-all duration-200">
                     Contact Us
                 </a>
             </div>
@@ -99,11 +131,11 @@
     </nav>
 
     <!-- Contact Section -->
-    <section class="w-full pt-12 md:pt-20 pb-12 md:pb-20 relative overflow-hidden">
+    <section class="w-full pt-32 sm:pt-36 md:pt-40 pb-12 md:pb-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-white via-spa-secondary/30 to-spa-bg"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-spa-third/10 via-transparent to-transparent"></div>
         <div class="relative w-full max-w-[1435px] mx-auto px-4 md:px-0">
-            <div class="mb-12 text-center">
+            <div class="mb-12 text-center pt-8 sm:pt-12 md:pt-16">
                 <h1 class="text-3xl md:text-[36px] font-medium text-spa-teal mb-4 leading-[100%]">Contact Us</h1>
                 <div class="w-24 h-1 bg-gradient-to-r from-spa-teal via-spa-third to-spa-teal mx-auto mb-4 rounded-full"></div>
                 <p class="text-lg text-spa-teal/90 max-w-2xl mx-auto">We have two convenient locations in Herndon, VA. Call us to book your appointment or visit us in person.</p>
@@ -144,16 +176,23 @@
         </div>
 
             <!-- Booking Info -->
-            <div class="max-w-4xl mx-auto bg-gradient-to-br from-spa-teal to-spa-teal-light text-white p-8 rounded-lg mb-12 shadow-2xl border-2 border-spa-third/30">
-                <h2 class="text-[24px] font-medium mb-4 text-center leading-[100%]">Book Your Appointment</h2>
-                <p class="text-lg text-center mb-6 text-white/90">Call either location to schedule your massage or facial treatment. We recommend booking at least 24 hours in advance, especially for our popular Head Scalp Spa Treatment.</p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="tel:5713524502" class="bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium text-center hover:bg-spa-third hover:text-white transition-all shadow-lg">
-                        Call Location I
-                    </a>
-                    <a href="tel:5715199086" class="bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium text-center hover:bg-spa-third hover:text-white transition-all shadow-lg">
-                        Call Location II
-                    </a>
+            <div class="max-w-4xl mx-auto bg-gradient-to-br from-spa-teal to-spa-teal-light rounded-lg mb-12 shadow-2xl border-2 border-spa-third/30 overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                        <img src="assets/images/man-and-woman-enjoying-rejuvenating-masks-together-2025-08-11-06-20-38-utc.jpg" alt="Book Your Appointment" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                    </div>
+                    <div class="md:w-1/2 p-8 text-white">
+                        <h2 class="text-[24px] font-medium mb-4 leading-[100%]">Book Your Appointment</h2>
+                        <p class="text-lg mb-6 text-white/90">Call either location to schedule your massage or facial treatment. We recommend booking at least 24 hours in advance, especially for our popular Head Scalp Spa Treatment.</p>
+                        <div class="flex flex-col gap-4">
+                            <a href="tel:5713524502" class="bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium text-center hover:bg-spa-third hover:text-white transition-all shadow-lg">
+                                Call Location I
+                            </a>
+                            <a href="tel:5715199086" class="bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium text-center hover:bg-spa-third hover:text-white transition-all shadow-lg">
+                                Call Location II
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -193,7 +232,7 @@
                 <!-- Brand Column -->
                 <div class="md:col-span-1">
                     <div class="mb-6">
-                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg" loading="lazy" width="80" height="80">
                     </div>
                     <p class="text-spa-secondary leading-relaxed mb-4">Professional massage therapy and beauty treatments in Herndon, Virginia. Experience relaxation and rejuvenation with our expert therapists.</p>
                 </div>
@@ -280,13 +319,92 @@
 
     <!-- Mobile Menu Script -->
     <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        (function() {
+            'use strict';
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+                    
+                    // Prevent body scroll when menu is open
+                    if (!isHidden) {
+                        document.body.style.overflow = '';
+                    } else {
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+                
+                // Close menu when clicking on a link
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        })();
     </script>
+    
+    <!-- Scroll Hide/Show Navigation Script -->
+    <script>
+        (function() {
+            'use strict';
+            const nav = document.getElementById('main-nav');
+            const scrollThreshold = 100; // Scroll distance before hiding
+            
+            if (!nav) return;
+            
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop < scrollThreshold) {
+                    // At the top of the page - show nav
+                    nav.classList.remove('nav-hidden');
+                    nav.classList.add('nav-visible');
+                } else {
+                    // Scrolled down - hide nav
+                    nav.classList.remove('nav-visible');
+                    nav.classList.add('nav-hidden');
+                }
+            }
+            
+            // Throttle scroll events for better performance
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+            
+            // Initialize nav as visible
+            nav.classList.add('nav-visible');
+        })();
+    </script>
+    
+    <style>
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+        .nav-visible {
+            transform: translateY(0);
+        }
+    </style>
 </body>
 </html>
 
