@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Crystal Spa | Herndon</title>
+    <meta name="description" content="Contact Crystal Spa in Herndon, VA. We have two convenient locations. Call us to book your appointment today.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'spa-teal': '#1D4D4F',
+                        'spa-teal-light': '#2A6365',
+                        'spa-secondary': '#D9CDBA',
+                        'spa-third': '#9B7E63',
+                        'spa-bg': '#F2EFDE',
+                        'spa-gray': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        'sans': ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Typography from Figma Design System */
+        h1 { font-size: 36px; font-weight: 500; line-height: 100%; }
+        h2 { font-size: 24px; font-weight: 500; line-height: 100%; }
+        h3 { font-size: 20px; font-weight: 500; line-height: 100%; }
+        h4 { font-size: 16px; font-weight: 500; line-height: 100%; }
+        h5 { font-size: 15px; font-weight: 500; line-height: 100%; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="w-full max-w-[1435px] mx-auto pt-[11px] pb-0 px-4 md:px-0">
+        <div class="flex items-center gap-4 md:gap-12 h-auto md:h-auto md:min-h-[105px] pl-0 md:pl-[5px] overflow-visible">
+            <!-- Logo -->
+            <div class="bg-white flex flex-col gap-[10px] items-start overflow-visible pl-4 md:pl-[130px] pr-4 md:pr-8 py-2 md:py-1 w-auto md:w-[475px] shrink-0">
+                <div class="h-24 md:h-[140px] w-auto md:w-[360px] relative shrink-0 flex items-center justify-start">
+                    <a href="index.html" class="block">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-6 shrink-0">
+                <!-- Menu -->
+                <div class="bg-white flex font-medium gap-6 h-[44.065px] items-center leading-normal px-4 py-[10.9px] text-[17.44px] text-spa-teal shrink-0">
+                    <a href="index.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Home</a>
+                    <a href="services.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Services</a>
+                    <a href="about.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">About Us</a>
+                    <a href="membership.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Membership</a>
+                    <a href="contact.html" class="relative shrink-0 whitespace-pre text-nowrap hover:text-spa-third transition-colors">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="flex flex-col items-start p-0 shrink-0 overflow-visible">
+                    <div class="h-[69.686px] w-[242.506px] relative shrink-0 group">
+                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all">
+                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors"></div>
+                            <span class="relative text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors">Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden ml-auto">
+                <svg class="w-6 h-6 text-spa-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-6 pb-4">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-spa-teal font-medium text-[17.44px]">Home</a>
+                <a href="services.html" class="text-spa-teal font-medium text-[17.44px]">Services</a>
+                <a href="about.html" class="text-spa-teal font-medium text-[17.44px]">About Us</a>
+                <a href="membership.html" class="text-spa-teal font-medium text-[17.44px]">Membership</a>
+                <a href="contact.html" class="text-spa-teal font-medium text-[17.44px]">Contact</a>
+                <a href="contact.html" class="px-6 py-3 border-2 border-white text-spa-teal rounded-[10px] font-medium text-center">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="w-full pt-12 md:pt-20 pb-12 md:pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-spa-secondary/30 to-spa-bg"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-spa-third/10 via-transparent to-transparent"></div>
+        <div class="relative w-full max-w-[1435px] mx-auto px-4 md:px-0">
+            <div class="mb-12 text-center">
+                <h1 class="text-3xl md:text-[36px] font-medium text-spa-teal mb-4 leading-[100%]">Contact Us</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-spa-teal via-spa-third to-spa-teal mx-auto mb-4 rounded-full"></div>
+                <p class="text-lg text-spa-teal/90 max-w-2xl mx-auto">We have two convenient locations in Herndon, VA. Call us to book your appointment or visit us in person.</p>
+            </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <!-- Location I -->
+            <div class="bg-gradient-to-br from-spa-secondary to-spa-secondary/80 p-8 rounded-lg border-2 border-spa-teal/30 hover:border-spa-third/50 hover:shadow-xl hover:scale-[1.02] transition-all group">
+                <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%] group-hover:text-spa-third transition-colors">Location I</h2>
+                <div class="space-y-3 text-spa-teal/90">
+                    <p class="text-lg">
+                        <strong class="text-spa-teal">Address:</strong><br>
+                        102 Elden Street, Suite #18<br>
+                        Herndon, VA 20170
+                    </p>
+                    <p class="text-lg">
+                        <strong class="text-spa-teal">Phone:</strong><br>
+                        <a href="tel:5713524502" class="text-spa-third hover:text-spa-teal font-semibold transition-colors">(571) 352-4502</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Location II -->
+            <div class="bg-gradient-to-br from-spa-secondary to-spa-secondary/80 p-8 rounded-lg border-2 border-spa-teal/30 hover:border-spa-third/50 hover:shadow-xl hover:scale-[1.02] transition-all group">
+                <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%] group-hover:text-spa-third transition-colors">Location II (New)</h2>
+                <div class="space-y-3 text-spa-teal/90">
+                    <p class="text-lg">
+                        <strong class="text-spa-teal">Address:</strong><br>
+                        150 Elden Street, Suite 150<br>
+                        Herndon, VA 20170
+                    </p>
+                    <p class="text-lg">
+                        <strong class="text-spa-teal">Phone:</strong><br>
+                        <a href="tel:5715199086" class="text-spa-third hover:text-spa-teal font-semibold transition-colors">(571) 519-9086</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+            <!-- Booking Info -->
+            <div class="max-w-4xl mx-auto bg-gradient-to-br from-spa-teal to-spa-teal-light text-white p-8 rounded-lg mb-12 shadow-2xl border-2 border-spa-third/30">
+                <h2 class="text-[24px] font-medium mb-4 text-center leading-[100%]">Book Your Appointment</h2>
+                <p class="text-lg text-center mb-6 text-white/90">Call either location to schedule your massage or facial treatment. We recommend booking at least 24 hours in advance, especially for our popular Head Scalp Spa Treatment.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="tel:5713524502" class="bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium text-center hover:bg-spa-third hover:text-white transition-all shadow-lg">
+                        Call Location I
+                    </a>
+                    <a href="tel:5715199086" class="bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium text-center hover:bg-spa-third hover:text-white transition-all shadow-lg">
+                        Call Location II
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-gradient-to-br from-spa-secondary to-spa-secondary/80 p-6 rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-xl transition-all group">
+                    <h3 class="text-[20px] font-medium text-spa-teal mb-3 leading-[100%] group-hover:text-spa-third transition-colors">Gift Cards Available</h3>
+                    <p class="text-spa-teal/90 mb-4">Give the gift of relaxation. Gift cards are available for purchase online or at both locations. Perfect for birthdays, holidays, or any special occasion.</p>
+                    <a href="https://giftup.app/place-order/5fcbf7bd-46e2-491b-fb13-08dcf47882f6" target="_blank" rel="noopener noreferrer" class="inline-block bg-spa-teal text-white px-6 py-2 rounded-lg font-medium hover:bg-spa-third transition-all text-sm">
+                        Purchase Online
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-spa-secondary to-spa-secondary/80 p-6 rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-xl transition-all group">
+                    <h3 class="text-[20px] font-medium text-spa-teal mb-3 leading-[100%] group-hover:text-spa-third transition-colors">Spa Parties</h3>
+                    <p class="text-spa-teal/90">Celebrate your special day with a personalized spa party! Perfect for weddings, birthdays, and more special events. Contact us to plan your event.</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-spa-secondary to-spa-secondary/80 p-6 rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-xl transition-all group">
+                    <h3 class="text-[20px] font-medium text-spa-teal mb-3 leading-[100%] group-hover:text-spa-third transition-colors">Membership Benefits</h3>
+                    <p class="text-spa-teal/90 mb-4">Join as a member and enjoy discounted rates on all services. Experience the benefits of regular spa treatments at special member pricing.</p>
+                    <a href="membership.html" class="inline-block bg-spa-teal text-white px-6 py-2 rounded-lg font-medium hover:bg-spa-third transition-all text-sm">
+                        View Plans
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-spa-teal text-white mt-20 relative overflow-hidden rounded-t-3xl">
+        <!-- Decorative top border -->
+        <div class="h-1 bg-gradient-to-r from-spa-secondary via-spa-third to-spa-secondary rounded-t-3xl"></div>
+        
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Column -->
+                <div class="md:col-span-1">
+                    <div class="mb-6">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg">
+                    </div>
+                    <p class="text-spa-secondary leading-relaxed mb-4">Professional massage therapy and beauty treatments in Herndon, Virginia. Experience relaxation and rejuvenation with our expert therapists.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-spa-secondary uppercase tracking-wide">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Home
+                        </a></li>
+                        <li><a href="services.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Services
+                        </a></li>
+                        <li><a href="about.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            About Us
+                        </a></li>
+                        <li><a href="membership.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Membership
+                        </a></li>
+                        <li><a href="contact.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Location I -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-spa-secondary uppercase tracking-wide">Location I</h3>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>102 Elden Street, Suite #18<br>Herndon, VA 20170</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:5713524502" class="hover:text-spa-secondary transition-colors">(571) 352-4502</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Location II -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-spa-secondary uppercase tracking-wide">Location II</h3>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>150 Elden Street, Suite 150<br>Herndon, VA 20170</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:5715199086" class="hover:text-spa-secondary transition-colors">(571) 519-9086</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-spa-secondary text-sm">&copy; 2025 Crystal Massage Spa, LLC. All rights reserved.</p>
+                    <div class="flex items-center gap-6 text-sm text-white/70">
+                        <span class="text-spa-secondary">Relax • Restore • Rejuvenate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+
