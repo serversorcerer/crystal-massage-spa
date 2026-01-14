@@ -58,6 +58,19 @@
         img {
             max-width: 100%;
             height: auto;
+            image-rendering: auto;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Ensure high quality rendering for all images */
+        img[src*="team"] {
+            image-rendering: auto;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            will-change: transform;
         }
         * {
             -webkit-tap-highlight-color: transparent;
@@ -71,10 +84,10 @@
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav id="main-nav" class="w-full max-w-[1435px] mx-auto pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-0 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
-        <div class="flex items-center gap-2 sm:gap-4 md:gap-8 lg:gap-12 h-auto min-h-[80px] sm:min-h-[90px] md:min-h-[105px] pl-2 sm:pl-4 md:pl-8 lg:pl-[130px] overflow-visible">
+    <nav id="main-nav" class="w-full pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-8 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 sm:gap-4 md:gap-8 lg:gap-12 h-auto min-h-[80px] sm:min-h-[90px] md:min-h-[105px] overflow-visible">
             <!-- Logo -->
-            <div class="flex flex-col gap-[10px] items-start overflow-visible pl-0 sm:pl-2 md:pl-4 lg:pl-[130px] pr-2 sm:pr-4 md:pr-8 py-2 md:py-1 w-auto sm:w-auto md:w-auto lg:w-[475px] shrink-0">
+            <div class="flex flex-col gap-[10px] items-start overflow-visible pr-2 sm:pr-4 md:pr-8 py-2 md:py-1 w-auto sm:w-auto md:w-auto lg:w-[475px] shrink-0">
                 <div class="h-16 sm:h-20 md:h-24 lg:h-[140px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[360px] relative shrink-0 flex items-center justify-start">
                     <a href="index.html" class="block" aria-label="Crystal Spa Home">
                         <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none" loading="eager" width="360" height="140">
@@ -133,115 +146,231 @@
     <!-- About Section -->
     <section class="w-full pt-32 sm:pt-36 md:pt-40 pb-12 md:pb-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-white via-spa-secondary/30 to-spa-bg"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-spa-third/10 via-transparent to-transparent"></div>
-        <div class="relative w-full max-w-[1435px] mx-auto px-4 md:px-0">
-            <div class="mb-12 text-center pt-8 sm:pt-12 md:pt-16">
-                <h1 class="text-3xl md:text-[36px] font-medium text-spa-teal mb-4 leading-[100%]">About Crystal Spa</h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-spa-teal via-spa-third to-spa-teal mx-auto rounded-full"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-spa-third/10 via-transparent to-transparent"></div>
+        <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 text-center pt-8 sm:pt-12 md:pt-16">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-medium text-spa-teal mb-8 leading-[1.1]">The Perfect Blend of <em class="italic font-normal">Eastern & Western Wellness</em></h1>
             </div>
 
         <!-- Main Content -->
-        <div class="max-w-4xl mx-auto space-y-12">
-            <!-- Philosophy -->
-            <div class="bg-gradient-to-br from-white to-spa-secondary/30 rounded-lg shadow-lg border border-spa-teal/10 overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
-                        <img src="assets/images/are-you-ready-for-a-day-of-ultimate-relaxation-2025-04-06-07-52-08-utc.jpg" alt="Relaxation at Crystal Spa" class="w-full h-full object-cover" loading="lazy" decoding="async">
-                    </div>
-                    <div class="md:w-1/2 p-8">
-                        <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%]">Your Body Works Hard For You. It's Time To Return The Favor.</h2>
-                        <p class="text-lg text-spa-teal/90 mb-4">Ignoring body aches, pains, stress, and anxiety can lead to long-term health problems. We "power through" these red flags to meet life's unending demands. We urge you to pause and reconsider.</p>
-                        <p class="text-lg text-spa-teal/90">At Crystal Spa, we believe every <em class="text-spa-third font-semibold">body</em> should be maintained with care and attention so you can feel your best. Because when you feel your best, you'll be ready to take on that next big challenge.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- What to Expect -->
-            <div class="bg-gradient-to-br from-white to-spa-secondary/20 p-8 rounded-lg">
-                <div class="md:flex md:items-center gap-8">
-                    <div class="md:w-1/2 mb-6 md:mb-0">
-                        <div class="h-64 rounded-lg overflow-hidden shadow-lg">
-                            <img src="assets/images/beautiful-young-woman-having-facial-treatment-2024-10-18-05-58-44-utc.jpg" alt="Crystal Spa Services" class="w-full h-full object-cover" loading="lazy" decoding="async">
+        <div class="max-w-6xl mx-auto space-y-16">
+            <!-- Owner Section -->
+            <div class="mb-20">
+                <h2 class="text-3xl md:text-4xl font-medium text-spa-teal mb-8 leading-[1.1]">Meet [Owner Name]: The Visionary Behind Crystal Spa</h2>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+                    <div class="w-full md:w-2/5">
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                            <img src="assets/images/team/PMD01851.jpg" alt="Owner" class="w-full h-full object-cover object-center" loading="eager" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0);">
                         </div>
                     </div>
-                    <div class="md:w-1/2">
-                        <h2 class="text-[24px] font-medium text-spa-teal mb-6 leading-[100%]">When You Book A Session With Crystal Spa</h2>
-                        <p class="text-lg text-spa-teal/90 mb-6">You can expect to leave renewed and restored after your elevated massage experience. We offer each guest:</p>
-                        <ul class="space-y-4 text-lg text-spa-teal/90">
-                            <li class="flex items-start bg-spa-secondary/50 p-4 rounded-lg">
-                                <span class="text-spa-third text-2xl mr-3 font-bold">•</span>
-                                <span>Customized massage options to fit your needs</span>
-                            </li>
-                            <li class="flex items-start bg-spa-secondary/50 p-4 rounded-lg">
-                                <span class="text-spa-third text-2xl mr-3 font-bold">•</span>
-                                <span>Cutting-edge spa technology for results you'll see and feel</span>
-                            </li>
-                            <li class="flex items-start bg-spa-secondary/50 p-4 rounded-lg">
-                                <span class="text-spa-third text-2xl mr-3 font-bold">•</span>
-                                <span>Natural, soothing, therapeutic-grade products</span>
-                            </li>
-                        </ul>
+                    <div class="w-full md:w-3/5 flex flex-col justify-center">
+                        <p class="text-lg md:text-xl text-spa-teal/90 leading-relaxed mb-4">
+                            [Owner Name] is a licensed Massage Therapist and Master Esthetician who founded Crystal Spa. Driven by a deep passion for caring for others, [Owner Name] opened the spa with the mission of helping people heal and feel more at ease in their bodies.
+                        </p>
+                        <p class="text-lg md:text-xl text-spa-teal/90 leading-relaxed">
+                            With a focus on therapeutic and results-driven treatments, <strong>she specializes in</strong> <strong>medical massage techniques such as lymphatic drainage, TMJ therapy, and craniosacral work.</strong> Her approach is not only restorative but also deeply supportive of her clients' overall wellness.
+                        </p>
                     </div>
                 </div>
             </div>
+            <!-- Our Dedication Section -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium text-spa-teal mb-6 leading-[1.1]">Our Dedication to <em class="italic font-normal">Excellence in Wellness</em></h2>
+                <p class="text-lg md:text-xl text-spa-teal/90 leading-relaxed mb-4">
+                    At Crystal Spa, our guests are at the heart of everything we do. We strive to exceed their expectations at every visit with our commitment to providing exceptional care with compassion, respect, and professionalism.
+                </p>
+                <p class="text-lg md:text-xl text-spa-teal/90 leading-relaxed">
+                    We believe in continuous learning and staying current with industry trends to ensure our team delivers personalized, high-quality service.
+                </p>
+            </div>
 
-            <!-- Experience Details -->
-            <div class="bg-gradient-to-br from-spa-secondary to-spa-secondary/80 rounded-lg border-2 border-spa-third/40 shadow-xl overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 p-8">
-                        <h2 class="text-[24px] font-medium text-spa-teal mb-6 leading-[100%]">When You Book At Crystal Spa, You Can Expect:</h2>
-                        <ul class="space-y-4 text-lg text-spa-teal/90">
-                            <li class="flex items-start">
-                                <span class="text-spa-third text-xl mr-3 font-bold">•</span>
-                                <span>A clean environment in alignment with COVID-19 safety protocols</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-spa-third text-xl mr-3 font-bold">•</span>
-                                <span>An elevated customer experience with treats offered to each guest</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-spa-third text-xl mr-3 font-bold">•</span>
-                                <span>The use of organic essential oils for therapeutic care</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-spa-third text-xl mr-3 font-bold">•</span>
-                                <span>Expert attention to detail and customized care from our employees</span>
-                            </li>
-                        </ul>
+            <!-- Team Section -->
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-5xl font-medium text-spa-teal mb-12 leading-[1.1] text-center">Meet The <em class="italic font-normal text-spa-teal/70">Team</em></h2>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
+                    <!-- Team Member 1 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01817.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
                     </div>
-                    <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
-                        <img src="assets/images/massagers-relieving-facial-tension-of-couple-at-sa-2025-08-11-06-15-21-utc.jpg" alt="Crystal Spa Experience" class="w-full h-full object-cover" loading="lazy" decoding="async">
+
+                    <!-- Team Member 2 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01824.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01826.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01829.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 5 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01831.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01838.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 7 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01842.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 8 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD01858.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 9 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD02388.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 10 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD02407.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 11 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD02420.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 12 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD02499.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 13 -->
+                    <div class="flex flex-col gap-4">
+                        <div class="w-full bg-white rounded-lg overflow-hidden" style="aspect-ratio: 3/4;">
+                            <img src="assets/images/team/PMD02509.jpg" alt="Team Member" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" width="500" height="667" style="display: block; image-rendering: auto; backface-visibility: hidden; transform: translateZ(0); object-position: center center;">
+                        </div>
+                        <div class="flex flex-col text-center">
+                            <h3 class="text-xl md:text-2xl font-medium text-spa-teal mb-1 leading-[1.1]">Name</h3>
+                            <p class="text-xs md:text-sm font-semibold text-spa-third uppercase tracking-wide mb-3">ROLE / SPECIALTY</p>
+                            <p class="text-sm md:text-base text-spa-teal/90 leading-relaxed text-left">Description will go here. This space is reserved for team member information including their specialty, experience, and approach to treatment.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Testimonials -->
             <div>
-                <h2 class="text-[24px] font-medium text-spa-teal mb-6 leading-[100%]">What Our Guests Say</h2>
+                <h2 class="text-3xl md:text-4xl font-medium text-spa-teal mb-8 leading-[100%] text-center">What Our Guests Say</h2>
                 <div class="space-y-6">
-                    <div class="bg-gradient-to-br from-spa-secondary to-white border-l-4 border-spa-third p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <p class="text-spa-teal/90 mb-2 italic">"We had the couples massage and afterwards we both felt like different people! The massage tore us apart (in a good way) and put us back together feeling better than ever. The masseuses were both incredibly knowledgeable and kind. Best massage in years, 10/10."</p>
-                        <p class="text-spa-third font-semibold">★★★★★ - Chris B</p>
+                    <div class="bg-gradient-to-br from-spa-secondary to-white border-l-4 border-spa-third p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <p class="text-spa-teal/90 mb-3 italic text-lg">"We had the couples massage and afterwards we both felt like different people! The massage tore us apart (in a good way) and put us back together feeling better than ever. The masseuses were both incredibly knowledgeable and kind. Best massage in years, 10/10."</p>
+                        <p class="text-spa-third font-semibold text-lg">★★★★★ - Chris B</p>
                     </div>
-                    <div class="bg-gradient-to-br from-spa-secondary to-white border-l-4 border-spa-third p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <p class="text-spa-teal/90 mb-2 italic">"Very friendly staff. Extremely clean inside and the best was the massage. Prices are also very reasonable 10/10. I joined as a member and they give you discounted rates. Emily was awesome!"</p>
-                        <p class="text-spa-third font-semibold">★★★★★ - Matt A</p>
+                    <div class="bg-gradient-to-br from-spa-secondary to-white border-l-4 border-spa-third p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <p class="text-spa-teal/90 mb-3 italic text-lg">"Very friendly staff. Extremely clean inside and the best was the massage. Prices are also very reasonable 10/10. I joined as a member and they give you discounted rates. Emily was awesome!"</p>
+                        <p class="text-spa-third font-semibold text-lg">★★★★★ - Matt A</p>
                     </div>
-                    <div class="bg-gradient-to-br from-spa-secondary to-white border-l-4 border-spa-third p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                        <p class="text-spa-teal/90 mb-2 italic">"I am very picky with massages, but this place did not disappoint! Very clean, relaxing environment. The staff are very friendly. Emily did a wonderful job, I am going to sleep well tonight! Will def be back."</p>
-                        <p class="text-spa-third font-semibold">★★★★★ - Afton G</p>
+                    <div class="bg-gradient-to-br from-spa-secondary to-white border-l-4 border-spa-third p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <p class="text-spa-teal/90 mb-3 italic text-lg">"I am very picky with massages, but this place did not disappoint! Very clean, relaxing environment. The staff are very friendly. Emily did a wonderful job, I am going to sleep well tonight! Will def be back."</p>
+                        <p class="text-spa-third font-semibold text-lg">★★★★★ - Afton G</p>
                     </div>
                 </div>
             </div>
 
             <!-- CTA -->
             <div class="text-center pt-8">
-                <div class="h-auto md:h-[67.569px] w-full md:w-[398.656px] relative mx-auto group">
-                    <div class="absolute bg-gradient-to-r from-spa-teal to-spa-teal-light inset-0 rounded-[10px] shadow-lg group-hover:shadow-xl transition-all"></div>
-                    <a href="contact.html" class="absolute bottom-[20%] left-0 right-0 top-[20%] flex items-center justify-center">
-                        <span class="text-xl md:text-[31.49px] font-normal leading-normal text-white text-center">Book Appointment</span>
-                    </a>
-                </div>
+                <a href="contact.html" class="inline-block bg-spa-teal text-white px-10 py-5 md:px-12 md:py-6 rounded-lg font-medium text-xl md:text-2xl hover:bg-spa-teal-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Book Appointment
+                </a>
             </div>
         </div>
         </div>
