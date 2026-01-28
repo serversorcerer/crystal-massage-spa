@@ -96,9 +96,8 @@
                 <!-- CTA Button -->
                 <div class="flex flex-col items-start p-0 shrink-0 overflow-visible">
                     <div class="h-[60px] xl:h-[69.686px] w-[200px] xl:w-[242.506px] relative shrink-0 group">
-                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all duration-200">
-                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors duration-200"></div>
-                            <span class="relative text-xl xl:text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors duration-200">Contact Us</span>
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="absolute border-2 border-spa-teal inset-0 rounded-[10px] flex items-center justify-center bg-spa-teal group-hover:bg-spa-teal-light transition-all duration-200">
+                            <span class="relative text-xl xl:text-[27.51px] font-normal text-white leading-normal text-center transition-colors duration-200">Book Now</span>
                         </a>
                     </div>
                 </div>
@@ -123,8 +122,8 @@
                 <a href="about.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">About Us</a>
                 <a href="membership.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Membership</a>
                 <a href="contact.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Contact</a>
-                <a href="contact.html" class="px-6 py-3 border-2 border-spa-teal text-spa-teal rounded-[10px] font-medium text-center touch-manipulation mt-2 hover:bg-spa-teal hover:text-white transition-all duration-200">
-                    Contact Us
+                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="px-6 py-3 bg-spa-teal text-white rounded-[10px] font-medium text-center touch-manipulation mt-2 hover:bg-spa-teal-light transition-all duration-200">
+                    Book Now
                 </a>
             </div>
         </div>
@@ -139,7 +138,7 @@
                 <h1 class="text-3xl md:text-[36px] font-medium text-spa-teal mb-4 leading-[100%]">Crystal Spa Membership Plan</h1>
                 <div class="w-24 h-1 bg-gradient-to-r from-spa-teal via-spa-third to-spa-teal mx-auto mb-6 rounded-full"></div>
                 <p class="text-lg text-spa-teal/90 mb-6">Three membership tiers to meet diverse needs and lifestyles, helping you find renewal and vitality in everyday life. Choose the membership that best suits you and enjoy special privileges each month.</p>
-                <a href="contact.html" class="inline-block bg-spa-teal text-white px-8 py-3 rounded-lg font-medium hover:bg-spa-teal-light transition-all shadow-lg">
+                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white px-8 py-3 rounded-lg font-medium hover:bg-spa-teal-light transition-all shadow-lg">
                     Join Now
                 </a>
             </div>
@@ -238,7 +237,7 @@
                 <div class="mt-12 text-center">
                     <div class="h-auto md:h-[67.569px] w-full md:w-[398.656px] relative mx-auto group">
                         <div class="absolute bg-gradient-to-r from-spa-teal to-spa-teal-light inset-0 rounded-[10px] shadow-lg group-hover:shadow-xl transition-all"></div>
-                        <a href="contact.html" class="absolute bottom-[20%] left-0 right-0 top-[20%] flex items-center justify-center">
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="absolute bottom-[20%] left-0 right-0 top-[20%] flex items-center justify-center">
                             <span class="text-xl md:text-[31.49px] font-normal leading-normal text-white text-center">Join Now</span>
                         </a>
                     </div>
@@ -430,6 +429,11 @@
             transform: translateY(0);
         }
     </style>
+    
+    <!-- Boulevard Self-Booking overlay -->
+    <script>
+    (function(a){var b={businessId:'740c480b-efc2-4856-84d7-f78933ea52e1'};var c=a.createElement('script');var d=a.querySelector('script');c.src='https://static.joinboulevard.com/injector.min.js';c.async=true;c.onload=function(){blvd.init(b);};d.parentNode.insertBefore(c,d);})(document);
+    </script>
 </body>
 </html>
 
