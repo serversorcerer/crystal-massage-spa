@@ -127,20 +127,18 @@
 <body class="bg-white">
     <!-- Navigation -->
     <nav id="main-nav" class="w-full pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-8 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
-        <div class="max-w-7xl mx-auto flex items-center gap-2 sm:gap-4 md:gap-8 lg:gap-12 h-auto min-h-[80px] sm:min-h-[90px] md:min-h-[105px] overflow-visible">
-            <!-- Logo -->
-            <div class="flex flex-col gap-[10px] items-start overflow-visible pr-2 sm:pr-4 md:pr-8 py-2 md:py-1 w-auto sm:w-auto md:w-auto lg:w-[475px] shrink-0">
-                <div class="h-16 sm:h-20 md:h-24 lg:h-[140px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[360px] relative shrink-0 flex items-center justify-start">
-                    <a href="index.html" class="block" aria-label="Crystal Spa Home">
-                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none" loading="eager" width="360" height="140">
-                    </a>
-                </div>
+        <!-- Desktop Navigation - 3 Column Grid -->
+        <div class="hidden lg:grid grid-cols-[300px_1fr_200px] xl:grid-cols-[360px_1fr_242px] items-end gap-8 xl:gap-12 max-w-[1400px] mx-auto min-h-[140px] xl:min-h-[160px] overflow-visible py-2 pb-4 px-4">
+            <!-- Left: Logo -->
+            <div class="flex items-end justify-start">
+                <a href="index.html" class="block" aria-label="Crystal Spa Home">
+                    <img src="assets/Logo.png" alt="Crystal Spa" class="h-[120px] xl:h-[140px] w-auto max-w-[300px] xl:max-w-[360px] object-contain pointer-events-none" loading="eager" width="360" height="140">
+                </a>
             </div>
             
-            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-4 xl:gap-6 shrink-0 flex-1">
-                <!-- Menu -->
-                <div class="flex font-medium gap-4 xl:gap-6 h-[44.065px] items-center leading-normal px-2 xl:px-4 py-[10.9px] text-base xl:text-[17.44px] text-spa-teal shrink-0">
+            <!-- Center: Nav Links (perfectly centered) -->
+            <div class="flex items-end justify-center pb-2">
+                <div class="flex font-medium gap-4 xl:gap-6 items-center text-base xl:text-[17.44px] text-spa-teal">
                     <a href="index.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Home</a>
                     <!-- Services Dropdown -->
                     <div class="relative group shrink-0 flex items-center">
@@ -165,20 +163,28 @@
                     <a href="membership.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Membership</a>
                     <a href="contact.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Contact</a>
                     <a href="https://giftup.app/place-order/5fcbf7bd-46e2-491b-fb13-08dcf47882f6" target="_blank" rel="noopener noreferrer" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Gift Cards</a>
-            </div>
-            
-            <!-- CTA Button -->
-                <div class="flex flex-col items-start p-0 shrink-0 overflow-visible">
-                    <div class="h-[60px] xl:h-[69.686px] w-[200px] xl:w-[242.506px] relative shrink-0 group">
-                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="absolute border-2 border-spa-teal inset-0 rounded-[10px] flex items-center justify-center bg-spa-teal group-hover:bg-spa-teal-light transition-all duration-200">
-                            <span class="relative text-xl xl:text-[27.51px] font-normal text-white leading-normal text-center transition-colors duration-200">Book Now</span>
-                        </a>
-                    </div>
                 </div>
             </div>
             
+            <!-- Right: Book Now Button -->
+            <div class="flex items-end justify-end">
+                <div class="h-[60px] xl:h-[69.686px] w-full relative group">
+                    <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="absolute border-2 border-spa-teal inset-0 rounded-[10px] flex items-center justify-center bg-spa-teal group-hover:bg-spa-teal-light transition-all duration-200">
+                        <span class="relative text-xl xl:text-[27.51px] font-normal text-white leading-normal text-center transition-colors duration-200">Book Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="lg:hidden flex items-center justify-between min-h-[80px] sm:min-h-[90px]">
+            <!-- Logo -->
+            <a href="index.html" class="block" aria-label="Crystal Spa Home">
+                <img src="assets/Logo.png" alt="Crystal Spa" class="h-16 sm:h-20 w-auto object-contain pointer-events-none" loading="eager" width="200" height="80">
+            </a>
+            
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="lg:hidden ml-auto p-2 touch-manipulation focus:outline-none focus:ring-2 focus:ring-spa-teal focus:ring-offset-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded="false">
+            <button id="mobile-menu-button" class="p-2 touch-manipulation focus:outline-none focus:ring-2 focus:ring-spa-teal focus:ring-offset-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded="false">
                 <svg id="menu-icon" class="w-6 h-6 text-spa-teal transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -237,7 +243,7 @@
                     <!-- Service 1: Customized Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Custom Massage.jpg" alt="Customized Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Custom Massage.jpg" alt="Customized Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Customized Massage</h3>
@@ -271,7 +277,7 @@
                     <!-- Service 2: Pure Relaxation Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Relaxing-Massage.jpg" alt="Pure Relaxation Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Relaxing-Massage.jpg" alt="Pure Relaxation Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Pure Relaxation Massage</h3>
@@ -305,7 +311,7 @@
                     <!-- Service 3: Deep Muscle Relief Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Deep-Tissue.jpg" alt="Deep Muscle Relief Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Deep-Tissue.jpg" alt="Deep Muscle Relief Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Deep Muscle Relief Massage</h3>
@@ -339,7 +345,7 @@
                     <!-- Service 4: Head, Neck & Shoulder Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Head-Neck-and shoulder massage.jpg" alt="Head, Neck & Shoulder Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Head-Neck-and shoulder massage.jpg" alt="Head, Neck & Shoulder Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Head, Neck & Shoulder Massage</h3>
@@ -371,7 +377,7 @@
                     <!-- Service 5: Reflexology Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Reflexology massage.jpg" alt="Reflexology Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Reflexology massage.jpg" alt="Reflexology Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Reflexology Massage</h3>
@@ -409,7 +415,7 @@
                     <!-- Service 1: Aroma Healing Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Aroma-Massage.jpg" alt="Aroma Healing Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Aroma-Massage.jpg" alt="Aroma Healing Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Aroma Healing Massage</h3>
@@ -443,7 +449,7 @@
                     <!-- Service 2: Hot Stone Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Hot-Stone-Massage.jpg" alt="Hot Stone Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Hot-Stone-Massage.jpg" alt="Hot Stone Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Hot Stone Massage</h3>
@@ -475,7 +481,7 @@
                     <!-- Service 3: Himalayan Salt Stone Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Salt Massage.jpg" alt="Himalayan Salt Stone Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Salt Massage.jpg" alt="Himalayan Salt Stone Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Himalayan Salt Stone Massage</h3>
@@ -514,7 +520,7 @@
                     <!-- Service 1: Therapeutic Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Theraputic-Massage.jpg" alt="Therapeutic Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Theraputic-Massage.jpg" alt="Therapeutic Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Therapeutic Massage</h3>
@@ -547,7 +553,7 @@
                     <!-- Service 2: Wellness Lymphatic Drainage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Lymphatic-Drainage.webp" alt="Wellness Lymphatic Drainage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Lymphatic-Drainage.webp" alt="Wellness Lymphatic Drainage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Wellness Lymphatic Drainage</h3>
@@ -580,7 +586,7 @@
                     <!-- Service 3: Prenatal Massage -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Prenatal Massage.jpg" alt="Prenatal Massage" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Prenatal Massage.jpg" alt="Prenatal Massage" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Prenatal Massage</h3>
@@ -614,11 +620,11 @@
             <!-- Head Scalp Spa Treatment Section -->
             <div id="head-scalp" class="mb-20 md:mb-24 scroll-mt-32">
                 <h2 class="text-2xl md:text-3xl font-medium text-spa-teal mb-12 text-center">Head Scalp Spa Treatment</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+                <div class="flex flex-wrap justify-center gap-8 md:gap-10 lg:gap-12">
                     <!-- Service 1: Signature Head Scalp Treatment -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col w-full md:w-[calc(50%-20px)] max-w-md">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/esthetician-giving-a-facial-massage-with-cream-on-2025-03-05-04-30-16-utc.jpg" alt="Signature Head Scalp Treatment" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/esthetician-giving-a-facial-massage-with-cream-on-2025-03-05-04-30-16-utc.jpg" alt="Signature Head Scalp Treatment" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Signature Head Scalp Treatment</h3>
@@ -647,9 +653,9 @@
                     </div>
 
                     <!-- Service 2: Luxury Head Scalp & Foot Spa -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col w-full md:w-[calc(50%-20px)] max-w-md">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/are-you-ready-for-a-day-of-ultimate-relaxation-2025-04-06-07-52-08-utc.jpg" alt="Luxury Head Scalp & Foot Spa" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/are-you-ready-for-a-day-of-ultimate-relaxation-2025-04-06-07-52-08-utc.jpg" alt="Luxury Head Scalp & Foot Spa" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Luxury Head Scalp & Foot Spa</h3>
@@ -682,18 +688,26 @@
             <!-- Facials Section -->
             <div id="facials" class="mb-20 md:mb-24 scroll-mt-32">
                 <h2 class="text-2xl md:text-3xl font-medium text-spa-teal mb-12 text-center">Facials</h2>
-                <div class="max-w-4xl mx-auto mb-8">
-                    <p class="text-center text-spa-teal/90 mb-8">Reveal your healthiest skin with our specialized facials, designed to refresh, repair, and rejuvenate.</p>
+                <div class="max-w-3xl mx-auto mb-12">
+                    <div class="bg-gradient-to-r from-spa-secondary/30 via-spa-secondary/50 to-spa-secondary/30 rounded-2xl px-8 py-6 md:px-12 md:py-8 border border-spa-teal/10">
+                        <p class="text-center text-lg md:text-xl lg:text-2xl text-spa-teal leading-relaxed">
+                            Reveal your <span class="font-semibold text-spa-third">healthiest skin</span> with our specialized facials, designed to <em class="italic">refresh</em>, <em class="italic">repair</em>, and <em class="italic">rejuvenate</em>.
+                        </p>
+                    </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
                     <!-- 30 Minute Services -->
                     <div class="md:col-span-2 xl:col-span-3">
-                        <h3 class="text-lg md:text-xl font-semibold text-spa-third mb-4">30 MINUTE SERVICES</h3>
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <div class="h-px flex-1 bg-gradient-to-r from-transparent via-spa-third/40 to-spa-third/40"></div>
+                            <h3 class="text-xl md:text-2xl font-bold text-spa-third bg-spa-third/10 px-6 py-2 rounded-full border border-spa-third/30 tracking-wide">30 MINUTE SERVICES</h3>
+                            <div class="h-px flex-1 bg-gradient-to-l from-transparent via-spa-third/40 to-spa-third/40"></div>
+                        </div>
                     </div>
                     <!-- Mini Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/beautiful-young-woman-having-facial-treatment-2024-10-18-05-58-44-utc.jpg" alt="Mini Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/beautiful-young-woman-having-facial-treatment-2024-10-18-05-58-44-utc.jpg" alt="Mini Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Mini Facial</h3>
@@ -723,7 +737,7 @@
                     <!-- Youthful Eye Rejuvenation -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Eye-Rejuvination.jpg" alt="Youthful Eye Rejuvenation" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Eye-Rejuvination.jpg" alt="Youthful Eye Rejuvenation" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Youthful Eye Rejuvenation</h3>
@@ -753,12 +767,16 @@
                     
                     <!-- 60 Minute Services -->
                     <div class="md:col-span-2 xl:col-span-3 mt-8">
-                        <h3 class="text-lg md:text-xl font-semibold text-spa-third mb-4">60 MINUTE SERVICES</h3>
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <div class="h-px flex-1 bg-gradient-to-r from-transparent via-spa-third/40 to-spa-third/40"></div>
+                            <h3 class="text-xl md:text-2xl font-bold text-spa-third bg-spa-third/10 px-6 py-2 rounded-full border border-spa-third/30 tracking-wide">60 MINUTE SERVICES</h3>
+                            <div class="h-px flex-1 bg-gradient-to-l from-transparent via-spa-third/40 to-spa-third/40"></div>
+                        </div>
                     </div>
                     <!-- Crystal Classic Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Classic-Facial.jpg" alt="Crystal Classic Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Classic-Facial.jpg" alt="Crystal Classic Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Crystal Classic Facial</h3>
@@ -788,7 +806,7 @@
                     <!-- Calming Soothing Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Calming Facial.jpg" alt="Calming Soothing Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Calming Facial.jpg" alt="Calming Soothing Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Calming Soothing Facial</h3>
@@ -818,7 +836,7 @@
                     <!-- Glow Peel Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Peel-Facial.jpg" alt="Glow Peel Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Peel-Facial.jpg" alt="Glow Peel Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Glow Peel Facial</h3>
@@ -848,7 +866,7 @@
                     <!-- Gentlemen's Rejuvenation Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Gentlemen's Rejuvenation Facial.jpg" alt="Gentlemen's Rejuvenation Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Gentlemen's Rejuvenation Facial.jpg" alt="Gentlemen's Rejuvenation Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Gentlemen's Rejuvenation Facial</h3>
@@ -878,12 +896,16 @@
                     
                     <!-- 80 Minute Services -->
                     <div class="md:col-span-2 xl:col-span-3 mt-8">
-                        <h3 class="text-lg md:text-xl font-semibold text-spa-third mb-4">80 MINUTE SERVICES</h3>
+                        <div class="flex items-center justify-center gap-3 mb-6">
+                            <div class="h-px flex-1 bg-gradient-to-r from-transparent via-spa-third/40 to-spa-third/40"></div>
+                            <h3 class="text-xl md:text-2xl font-bold text-spa-third bg-spa-third/10 px-6 py-2 rounded-full border border-spa-third/30 tracking-wide">80 MINUTE SERVICES</h3>
+                            <div class="h-px flex-1 bg-gradient-to-l from-transparent via-spa-third/40 to-spa-third/40"></div>
+                        </div>
                     </div>
                     <!-- Hydration Glow Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Hydration Glow Facial.jpg" alt="Hydration Glow Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Hydration Glow Facial.jpg" alt="Hydration Glow Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Hydration Glow Facial</h3>
@@ -913,7 +935,7 @@
                     <!-- Collagen Revitalizing Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Collagen Revitalizing Facial.jpg" alt="Collagen Revitalizing Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Collagen Revitalizing Facial.jpg" alt="Collagen Revitalizing Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Collagen Revitalizing Facial</h3>
@@ -943,7 +965,7 @@
                     <!-- Back Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Back Facial.jpg" alt="Back Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Back Facial.jpg" alt="Back Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Back Facial</h3>
@@ -973,7 +995,7 @@
                     <!-- Customized Luxury Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Luxury Facial.jpg" alt="Customized Luxury Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Luxury Facial.jpg" alt="Customized Luxury Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Customized Luxury Facial</h3>
@@ -1003,7 +1025,7 @@
                     <!-- Firm & Lift Anti-Aging Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Firm & Lift Anti-Aging Facial.jpg" alt="Firm & Lift Anti-Aging Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Firm & Lift Anti-Aging Facial.jpg" alt="Firm & Lift Anti-Aging Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Firm & Lift Anti-Aging Facial</h3>
@@ -1033,7 +1055,7 @@
                     <!-- Brightening Vit. C Treatment -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Brightening Vit. C Treatment.jpg" alt="Brightening Vit. C Treatment" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Brightening Vit. C Treatment.jpg" alt="Brightening Vit. C Treatment" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Brightening Vit. C Treatment</h3>
@@ -1063,7 +1085,7 @@
                     <!-- Golden Luxury Facial -->
                     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Golden Luxury Facial.jpg" alt="Golden Luxury Facial" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Golden Luxury Facial.jpg" alt="Golden Luxury Facial" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Golden Luxury Facial</h3>
@@ -1090,26 +1112,36 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Facial Add-ons -->
-                <div class="max-w-4xl mx-auto mt-12">
-                    <h3 class="text-lg md:text-xl font-semibold text-spa-third mb-6 text-center">FACIAL ADD ONS</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="bg-white rounded-lg p-6 border-2 border-spa-teal/20 hover:border-spa-third/50 transition-all">
-                            <h4 class="font-semibold text-spa-teal mb-2">Hydrating Ampoule</h4>
-                            <p class="text-spa-teal/90 text-sm mb-3">Deep hydration boost for your facial treatment.</p>
-                            <p class="text-lg font-semibold text-spa-teal">$20</p>
-                        </div>
-                        <div class="bg-white rounded-lg p-6 border-2 border-spa-teal/20 hover:border-spa-third/50 transition-all">
-                            <h4 class="font-semibold text-spa-teal mb-2">LED Light Therapy</h4>
-                            <p class="text-spa-teal/90 text-sm mb-3">Advanced light therapy to enhance your facial results.</p>
-                            <p class="text-lg font-semibold text-spa-teal">$30</p>
-                        </div>
-                        <div class="bg-white rounded-lg p-6 border-2 border-spa-teal/20 hover:border-spa-third/50 transition-all">
-                            <h4 class="font-semibold text-spa-teal mb-2">Dermaplaning</h4>
-                            <p class="text-spa-teal/90 text-sm mb-3">Gentle exfoliation to reveal smoother, brighter skin.</p>
-                            <p class="text-lg font-semibold text-spa-teal">$60</p>
+                    
+                    <!-- Facial Add-ons Card -->
+                    <div class="bg-gradient-to-br from-spa-secondary/50 to-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col border-2 border-spa-third/30">
+                        <div class="p-8 md:p-10 flex flex-col h-full">
+                            <h3 class="text-2xl md:text-3xl font-medium text-spa-third mb-6 leading-[1.1] text-center">Facial Add Ons</h3>
+                            <p class="text-sm text-spa-teal/80 mb-6 text-center">Enhance your facial experience</p>
+                            
+                            <div class="space-y-4 flex-grow">
+                                <div class="bg-white rounded-lg p-4 border border-spa-teal/20 hover:border-spa-third/50 transition-all">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-semibold text-spa-teal">Hydrating Ampoule</h4>
+                                        <span class="text-lg font-semibold text-spa-third">$20</span>
+                                    </div>
+                                    <p class="text-spa-teal/80 text-sm">Deep hydration boost for your facial treatment.</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 border border-spa-teal/20 hover:border-spa-third/50 transition-all">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-semibold text-spa-teal">LED Light Therapy</h4>
+                                        <span class="text-lg font-semibold text-spa-third">$30</span>
+                                    </div>
+                                    <p class="text-spa-teal/80 text-sm">Advanced light therapy to enhance your facial results.</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 border border-spa-teal/20 hover:border-spa-third/50 transition-all">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h4 class="font-semibold text-spa-teal">Dermaplaning</h4>
+                                        <span class="text-lg font-semibold text-spa-third">$60</span>
+                                    </div>
+                                    <p class="text-spa-teal/80 text-sm">Gentle exfoliation to reveal smoother, brighter skin.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1118,11 +1150,11 @@
             <!-- Acupuncture & Eastern Healing Section -->
             <div id="acupuncture" class="mb-20 md:mb-24 scroll-mt-32">
                 <h2 class="text-2xl md:text-3xl font-medium text-spa-teal mb-12 text-center">Acupuncture & Eastern Healing</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+                <div class="flex flex-wrap justify-center gap-8 md:gap-10 lg:gap-12">
                     <!-- Service 1: Acupuncture Therapy -->
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col w-full max-w-md">
                         <div class="h-80 md:h-96 overflow-hidden">
-                            <img src="assets/images/Acupuncture Therapy.jpg" alt="Acupuncture Therapy" class="w-full h-full object-cover" loading="lazy" width="600" height="800">
+                            <img src="assets/images/Acupuncture Therapy.jpg" alt="Acupuncture Therapy" class="w-full h-full object-cover" loading="eager" width="600" height="800">
                         </div>
                         <div class="p-8 md:p-10 flex flex-col flex-grow">
                             <h3 class="text-2xl md:text-3xl font-medium text-spa-teal mb-3 leading-[1.1]">Acupuncture Therapy</h3>
@@ -1201,7 +1233,7 @@
 
             <!-- CTA Section -->
             <div class="text-center mb-12">
-                <a href="contact.html" class="inline-block bg-spa-teal text-white px-10 py-5 md:px-12 md:py-6 rounded-lg font-medium text-xl md:text-2xl hover:bg-spa-teal-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white px-10 py-5 md:px-12 md:py-6 rounded-lg font-medium text-xl md:text-2xl hover:bg-spa-teal-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     Book Appointment
                 </a>
             </div>
@@ -1231,7 +1263,7 @@
                 <!-- Brand Column -->
                 <div class="md:col-span-1">
                     <div class="mb-6">
-                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg" loading="lazy" width="80" height="80">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg" loading="eager" width="80" height="80">
                     </div>
                     <p class="text-spa-secondary leading-relaxed mb-4">Professional massage therapy and beauty treatments in Herndon, Virginia. Experience relaxation and rejuvenation with our expert therapists.</p>
                 </div>

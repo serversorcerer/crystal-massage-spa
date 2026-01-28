@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1D4D4F">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Services - Crystal Spa | Herndon</title>
+    <meta name="description" content="Crystal Spa offers traditional massages, signature massages, medical massages, head scalp spa treatments, facials, and more in Herndon, VA.">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preload" as="image" href="assets/images/female-therapist-massaging-back-of-woman-lying-on-2025-01-09-04-03-49-utc.jpg" fetchpriority="high">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'spa-teal': '#1D4D4F',
+                        'spa-teal-light': '#2A6365',
+                        'spa-secondary': '#D9CDBA',
+                        'spa-third': '#9B7E63',
+                        'spa-bg': '#F2EFDE',
+                        'spa-gray': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        'sans': ['Space Grotesk', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <style>
+        body {
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        /* Typography from Figma Design System */
+        h1 { font-size: 36px; font-weight: 500; line-height: 100%; }
+        h2 { font-size: 24px; font-weight: 500; line-height: 100%; }
+        h3 { font-size: 20px; font-weight: 500; line-height: 100%; }
+        h4 { font-size: 16px; font-weight: 500; line-height: 100%; }
+        h5 { font-size: 15px; font-weight: 500; line-height: 100%; }
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 22px; }
+            h3 { font-size: 18px; }
+        }
+        /* Image Performance Optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        .group:hover img {
+            will-change: transform;
+        }
+        /* Performance Optimizations */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        a, button {
+            touch-action: manipulation;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        /* Reduce layout shift */
+        [class*="h-"] {
+            contain: layout;
+        }
+        /* Smooth scrolling optimization */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Prevent image tearing during scroll */
+        img {
+            backface-visibility: hidden;
+            transform: translateZ(0);
+        }
+        /* Optimize service cards */
+        .service-card {
+            contain: layout style paint;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav id="main-nav" class="w-full pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-8 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 sm:gap-4 md:gap-8 lg:gap-12 h-auto min-h-[80px] sm:min-h-[90px] md:min-h-[105px] overflow-visible">
+            <!-- Logo -->
+            <div class="flex flex-col gap-[10px] items-start overflow-visible pr-2 sm:pr-4 md:pr-8 py-2 md:py-1 w-auto sm:w-auto md:w-auto lg:w-[475px] shrink-0">
+                <div class="h-16 sm:h-20 md:h-24 lg:h-[140px] w-auto max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[360px] relative shrink-0 flex items-center justify-start">
+                    <a href="index.html" class="block" aria-label="Crystal Spa Home">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-full w-auto object-contain object-left object-center pointer-events-none" loading="eager" width="360" height="140">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center justify-center overflow-visible px-0 py-[1.181px] gap-4 xl:gap-6 shrink-0 flex-1">
+                <!-- Menu -->
+                <div class="flex font-medium gap-4 xl:gap-6 h-[44.065px] items-center leading-normal px-2 xl:px-4 py-[10.9px] text-base xl:text-[17.44px] text-spa-teal shrink-0">
+                    <a href="index.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Home</a>
+                    <a href="services.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Services</a>
+                    <a href="about.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">About Us</a>
+                    <a href="membership.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Membership</a>
+                    <a href="contact.html" class="relative shrink-0 whitespace-nowrap hover:text-spa-third transition-colors duration-200">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="flex flex-col items-start p-0 shrink-0 overflow-visible">
+                    <div class="h-[60px] xl:h-[69.686px] w-[200px] xl:w-[242.506px] relative shrink-0 group">
+                        <a href="contact.html" class="absolute border-2 border-white inset-0 rounded-[10px] flex items-center justify-center bg-white group-hover:bg-spa-secondary transition-all duration-200">
+                            <div class="absolute border-2 border-spa-teal inset-[-2px] rounded-[10px] group-hover:border-spa-third transition-colors duration-200"></div>
+                            <span class="relative text-xl xl:text-[27.51px] font-normal text-spa-teal group-hover:text-spa-third leading-normal text-center transition-colors duration-200">Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden ml-auto p-2 touch-manipulation focus:outline-none focus:ring-2 focus:ring-spa-teal focus:ring-offset-2 rounded-md" aria-label="Toggle mobile menu" aria-expanded="false">
+                <svg id="menu-icon" class="w-6 h-6 text-spa-teal transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 text-spa-teal hidden transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 px-2 border-t border-spa-teal/10 bg-white/80 backdrop-blur-md">
+            <div class="flex flex-col space-y-2 pt-4">
+                <a href="index.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Home</a>
+                <a href="services.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Services</a>
+                <a href="about.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">About Us</a>
+                <a href="membership.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Membership</a>
+                <a href="contact.html" class="text-spa-teal font-medium text-base sm:text-lg py-3 px-3 touch-manipulation hover:bg-spa-secondary/30 rounded-md transition-colors duration-200">Contact</a>
+                <a href="contact.html" class="px-6 py-3 border-2 border-spa-teal text-spa-teal rounded-[10px] font-medium text-center touch-manipulation mt-2 hover:bg-spa-teal hover:text-white transition-all duration-200">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="w-full pt-32 sm:pt-36 md:pt-40 pb-12 md:pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-spa-secondary/30 to-spa-bg"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-spa-third/10 via-transparent to-transparent"></div>
+        <div class="relative w-full max-w-[1435px] mx-auto px-4 md:px-0">
+            <div class="mb-12 text-center pt-8 sm:pt-12 md:pt-16">
+            <h1 class="text-3xl md:text-[36px] font-medium text-spa-teal mb-4 leading-[100%]">Our Services</h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-spa-teal via-spa-third to-spa-teal mx-auto mb-4 rounded-full"></div>
+            <p class="text-lg text-spa-teal/90 max-w-2xl mx-auto">Choose from our comprehensive range of massage and beauty treatments designed to restore and rejuvenate your mind and body.</p>
+        </div>
+
+        <!-- Traditional Massages -->
+        <div class="max-w-5xl mx-auto mb-20">
+            <div class="mb-8">
+                <div class="h-64 md:h-80 rounded-2xl overflow-hidden mb-6 shadow-xl">
+                    <img src="assets/images/female-therapist-massaging-back-of-woman-lying-on-2025-01-09-04-03-49-utc.jpg" alt="Traditional Massages" class="w-full h-full object-cover" loading="eager" fetchpriority="high" width="800" height="320">
+                </div>
+                <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%] text-center">Traditional Massages</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Pure Relaxation Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Classic Swedish massage with flowing strokes to relax muscles and relieve tension.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — $59</div>
+                            <div>60 min — $119</div>
+                            <div>90 min — $159</div>
+                            <div>120 min — $209</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Deep Muscle Relief</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Targeted techniques to relieve deep muscle tension and chronic aches.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — $69</div>
+                            <div>60 min — $129</div>
+                            <div>90 min — $169</div>
+                            <div>120 min — $219</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Thai Combo Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Deep stretches, rhythmic compression, and acupressure for flexibility and energy flow.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $129</div>
+                            <div>90 min — $169</div>
+                            <div>120 min — $219</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Stress Relief Neck & Shoulder</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Focused relief for neck and shoulder tension from desk work or daily stress.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $129</div>
+                            <div>90 min — $169</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Sports Recovery Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Pre or post-workout massage to prepare muscles or aid recovery.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $129</div>
+                            <div>90 min — $169</div>
+                            <div>120 min — $219</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signature Massages -->
+        <div class="max-w-5xl mx-auto mb-20">
+            <div class="mb-8">
+                <div class="h-64 md:h-80 rounded-2xl overflow-hidden mb-6 shadow-xl">
+                    <img src="assets/images/treat-yourself-to-some-tlc-shot-of-an-attractive-2025-04-05-17-59-00-utc.jpg" alt="Signature Massages" class="w-full h-full object-cover" loading="eager" width="800" height="320">
+                </div>
+                <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%] text-center">Signature Massages</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Combo Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Blend of Swedish, deep tissue, and stretch techniques for perfect balance.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — $69</div>
+                            <div>60 min — $139</div>
+                            <div>90 min — $189</div>
+                            <div>120 min — $239</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Aroma Healing Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">doTERRA essential oils combined with soothing techniques for deep relaxation.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — $79</div>
+                            <div>60 min — $149</div>
+                            <div>90 min — $199</div>
+                            <div>120 min — $249</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Hot Stone Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Heated stones glide over tense muscles to release deep-rooted tension.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $139</div>
+                            <div>90 min — $189</div>
+                            <div>120 min — $259</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Himalayan Salt Stone</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Warm salt stones melt away stress and infuse minerals for balance.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $129</div>
+                            <div>90 min — $169</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Exfoliating Body Renewal</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Full-body exfoliation and soothing massage for silky-smooth, glowing skin.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $129</div>
+                            <div>90 min — $169</div>
+                            <div>120 min — $219</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Massages -->
+        <div class="max-w-5xl mx-auto mb-20">
+            <div class="mb-8">
+                <div class="h-64 md:h-80 rounded-2xl overflow-hidden mb-6 shadow-xl">
+                    <img src="assets/images/beautiful-smiling-woman-with-flowers-resting-in-th-2025-01-16-15-12-25-utc.jpg" alt="Medical Massages" class="w-full h-full object-cover" loading="eager" width="800" height="320">
+                </div>
+                <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%] text-center">Medical Massages</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Acupuncture</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Fine needles stimulate energy flow to manage chronic pain, tension, and headaches.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $139</div>
+                            <div>90 min — $199</div>
+                            <div>120 min — $259</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Wellness Lymphatic Drainage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Gentle, rhythmic massage to stimulate lymphatic system and boost immunity.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — $69</div>
+                            <div>60 min — $149</div>
+                            <div>90 min — $199</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Post-Surgery Lymph Drainage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Specialized massage to support recovery, reduce swelling, and accelerate healing.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — $169</div>
+                            <div>90 min — $219</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Prenatal Massage</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Tailored for expecting mothers to alleviate pregnancy stresses and discomforts.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — $79</div>
+                            <div>60 min — $149</div>
+                            <div>90 min — $199</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Head Scalp Spa & Facials -->
+        <div class="max-w-5xl mx-auto mb-20">
+            <div class="mb-8">
+                <div class="h-64 md:h-80 rounded-2xl overflow-hidden mb-6 shadow-xl">
+                    <img src="assets/images/esthetician-giving-a-facial-massage-with-cream-on-2025-03-05-04-30-16-utc.jpg" alt="Head Scalp Spa & Facials" class="w-full h-full object-cover" loading="eager" width="800" height="320">
+                </div>
+                <h2 class="text-[24px] font-medium text-spa-teal mb-4 leading-[100%] text-center">Head Scalp Spa & Facials</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Head Scalp Spa Treatment</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Focus on scalp, hair, and neck care. Highly popular—book 24 hours in advance.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — Available</div>
+                            <div>90 min — Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Facial 30 Min</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Quick facial treatment perfect for refreshing and revitalizing your skin.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>30 min — Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Facial 60 Min</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Comprehensive facial with deep cleansing and hydration for optimal skin health.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>60 min — Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-spa-secondary to-white rounded-lg border-2 border-spa-teal/20 hover:border-spa-third/50 hover:shadow-lg transition-all p-6 service-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] font-medium text-spa-teal mb-2">Facial 80 Min</h3>
+                            <p class="text-spa-teal/80 text-sm mb-3">Extended luxury facial with advanced treatments and complete skin restoration.</p>
+                        </div>
+                        <div class="text-spa-third font-medium text-right whitespace-nowrap">
+                            <div>80 min — Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Membership -->
+            <div class="mt-12 max-w-4xl mx-auto bg-gradient-to-br from-spa-teal to-spa-teal-light text-white p-8 rounded-lg text-center shadow-2xl border-2 border-spa-third/30">
+                <h2 class="text-[24px] font-medium mb-4 leading-[100%]">Membership Benefits</h2>
+                <p class="text-lg mb-6 text-white/90">Join as a member and enjoy discounted rates on all services. Experience the benefits of regular spa treatments at special member pricing.</p>
+                <a href="membership.html" class="inline-block bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium hover:bg-spa-third hover:text-white transition-all shadow-lg">
+                    Learn More
+                </a>
+            </div>
+
+            <!-- Gift Cards -->
+            <div class="mt-12 max-w-4xl mx-auto bg-gradient-to-br from-spa-third to-spa-third/80 text-white p-8 rounded-lg text-center shadow-2xl border-2 border-spa-teal/30">
+                <h2 class="text-[24px] font-medium mb-4 leading-[100%]">Gift Cards Available</h2>
+                <p class="text-lg mb-6 text-white/90">Give the gift of relaxation. Perfect for birthdays, holidays, or any special occasion.</p>
+                <a href="https://giftup.app/place-order/5fcbf7bd-46e2-491b-fb13-08dcf47882f6" target="_blank" rel="noopener noreferrer" class="inline-block bg-spa-secondary text-spa-teal px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-spa-teal transition-all shadow-lg">
+                    Purchase Gift Card
+                </a>
+            </div>
+
+            <!-- Booking Note -->
+            <div class="mt-8 max-w-4xl mx-auto bg-spa-secondary/50 p-6 rounded-lg border border-spa-third/30 text-center">
+                <p class="text-spa-teal/90 text-sm">📞 Call to book your appointment. Head Scalp Spa Treatment requires 24-hour advance booking.</p>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-12 text-center">
+                <div class="h-auto md:h-[67.569px] w-full md:w-[398.656px] relative mx-auto group">
+                    <div class="absolute bg-gradient-to-r from-spa-teal to-spa-teal-light inset-0 rounded-[10px] shadow-lg group-hover:shadow-xl transition-all"></div>
+                    <a href="contact.html" class="absolute bottom-[20%] left-0 right-0 top-[20%] flex items-center justify-center">
+                        <span class="text-xl md:text-[31.49px] font-normal leading-normal text-white text-center">Book Appointment</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="w-full bg-gradient-to-br from-spa-teal to-spa-teal-light py-12 md:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-medium text-white mb-3">Join Our Wellness Community</h2>
+            <p class="text-white/90 mb-6 text-sm sm:text-base">Be the first to receive exclusive offers, self-care tips, and special spa perks</p>
+            <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Email Address" required class="flex-1 px-4 py-3 rounded-lg text-spa-teal placeholder-spa-teal/60 focus:outline-none focus:ring-2 focus:ring-spa-secondary focus:ring-offset-2 text-sm sm:text-base">
+                <button type="submit" class="px-6 py-3 bg-spa-secondary text-spa-teal font-medium rounded-lg hover:bg-spa-secondary/90 transition-colors duration-200 whitespace-nowrap text-sm sm:text-base">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-spa-teal text-white mt-0 relative overflow-hidden rounded-t-3xl">
+        <!-- Decorative top border -->
+        <div class="h-1 bg-gradient-to-r from-spa-secondary via-spa-third to-spa-secondary rounded-t-3xl"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-6 py-8 sm:py-12 md:py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
+                <!-- Brand Column -->
+                <div class="md:col-span-1">
+                    <div class="mb-6">
+                        <img src="assets/Logo.png" alt="Crystal Spa" class="h-20 w-auto brightness-0 invert opacity-90 rounded-lg" loading="lazy" width="80" height="80">
+                    </div>
+                    <p class="text-spa-secondary leading-relaxed mb-4">Professional massage therapy and beauty treatments in Herndon, Virginia. Experience relaxation and rejuvenation with our expert therapists.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-spa-secondary uppercase tracking-wide">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Home
+                        </a></li>
+                        <li><a href="services.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Services
+                        </a></li>
+                        <li><a href="about.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            About Us
+                        </a></li>
+                        <li><a href="membership.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Membership
+                        </a></li>
+                        <li><a href="contact.html" class="text-white/90 hover:text-spa-secondary transition-colors flex items-center group">
+                            <span class="w-0 group-hover:w-2 h-0.5 bg-spa-secondary mr-0 group-hover:mr-2 transition-all"></span>
+                            Contact
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Location I -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-spa-secondary uppercase tracking-wide">Location I</h3>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>102 Elden Street, Suite #18<br>Herndon, VA 20170</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:5713524502" class="hover:text-spa-secondary transition-colors">(571) 352-4502</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Location II -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-spa-secondary uppercase tracking-wide">Location II</h3>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>150 Elden Street, Suite 150<br>Herndon, VA 20170</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-spa-secondary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <a href="tel:5715199086" class="hover:text-spa-secondary transition-colors">(571) 519-9086</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Accessibility & Additional Info -->
+            <div class="border-t border-white/20 pt-6 sm:pt-8 mb-6 sm:mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-white/80">
+                    <div>
+                        <p class="text-spa-secondary font-medium mb-2">Accessibility</p>
+                        <p>Wheelchair access available. Please call ahead for assistance.</p>
+                    </div>
+                    <div>
+                        <p class="text-spa-secondary font-medium mb-2">Gift Cards</p>
+                        <a href="https://giftup.app/place-order/5fcbf7bd-46e2-491b-fb13-08dcf47882f6" class="hover:text-spa-secondary transition-colors underline">Purchase Gift Cards Online</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/20 pt-6 sm:pt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
+                    <p class="text-spa-secondary text-xs sm:text-sm">&copy; 2025 Crystal Massage Spa, LLC. All rights reserved.</p>
+                    <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-white/70">
+                        <span class="text-spa-secondary">Relax • Restore • Rejuvenate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        (function() {
+            'use strict';
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+                    
+                    // Prevent body scroll when menu is open
+                    if (!isHidden) {
+                        document.body.style.overflow = '';
+                    } else {
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+                
+                // Close menu when clicking on a link
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        })();
+    </script>
+    
+    <!-- Scroll Hide/Show Navigation Script -->
+    <script>
+        (function() {
+            'use strict';
+            const nav = document.getElementById('main-nav');
+            const scrollThreshold = 100; // Scroll distance before hiding
+            
+            if (!nav) return;
+            
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop < scrollThreshold) {
+                    // At the top of the page - show nav
+                    nav.classList.remove('nav-hidden');
+                    nav.classList.add('nav-visible');
+                } else {
+                    // Scrolled down - hide nav
+                    nav.classList.remove('nav-visible');
+                    nav.classList.add('nav-hidden');
+                }
+            }
+            
+            // Throttle scroll events for better performance
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+            
+            // Initialize nav as visible
+            nav.classList.add('nav-visible');
+        })();
+    </script>
+    
+    <style>
+        .nav-hidden {
+            transform: translateY(-100%);
+        }
+        .nav-visible {
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>
+
