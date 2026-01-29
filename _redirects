@@ -1,0 +1,4 @@
+# Netlify Redirects
+
+# Favicon redirect for browsers requesting .ico
+/favicon.ico    /favicon.png    200
