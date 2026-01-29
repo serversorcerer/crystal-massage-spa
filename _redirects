@@ -2,3 +2,6 @@
 
 # Favicon redirect for browsers requesting .ico
 /favicon.ico    /favicon.png    200
+
+# Services redirect
+/services.html    /services/    301

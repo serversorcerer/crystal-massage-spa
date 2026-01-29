@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#1D4D4F">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <title>Services - Crystal Spa | Herndon</title>
+    <meta name="description" content="Crystal Spa offers traditional massages, signature massages, medical massages, head scalp spa treatments, facials, and acupuncture in Herndon, VA.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crystalspaherndon.com/services/">
+    <meta property="og:title" content="Services - Crystal Spa | Herndon, VA">
+    <meta property="og:description" content="Massage therapy, facials, and wellness treatments in Herndon, VA.">
+    <meta property="og:image" content="https://crystalspaherndon.com/assets/Logo.png">
+    
+    <link rel="canonical" href="https://crystalspaherndon.com/services/">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'spa-teal': '#1D4D4F',
+                        'spa-teal-light': '#2A6365',
+                        'spa-secondary': '#D9CDBA',
+                        'spa-third': '#9B7E63',
+                        'spa-bg': '#F2EFDE',
+                    },
+                    fontFamily: {
+                        'sans': ['Lato', 'system-ui', 'sans-serif'],
+                        'heading': ['Cormorant Garamond', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .font-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; }
+        h1 { font-size: 42px; line-height: 1.1; }
+        h2 { font-size: 32px; line-height: 1.15; }
+        h3 { font-size: 24px; line-height: 1.2; }
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            h2 { font-size: 26px; }
+            h3 { font-size: 20px; }
+        }
+        a, button { touch-action: manipulation; }
+        @media (max-width: 768px) { a, button { min-height: 44px; } }
+    </style>
+</head>
+<body class="bg-spa-bg">
+    <!-- Navigation -->
+    <nav id="main-nav" class="w-full pt-2 sm:pt-[11px] pb-0 px-3 sm:px-4 md:px-6 lg:px-8 overflow-visible fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+        <div class="hidden lg:grid grid-cols-[300px_1fr_200px] xl:grid-cols-[360px_1fr_242px] items-end gap-8 xl:gap-12 max-w-[1400px] mx-auto min-h-[140px] xl:min-h-[160px] overflow-visible py-2 pb-4 px-4">
+            <div class="flex items-end justify-start">
+                <a href="../index.html" class="block" aria-label="Crystal Spa Home">
+                    <img src="../assets/Logo.png" alt="Crystal Spa" class="h-[120px] xl:h-[140px] w-auto max-w-[300px] xl:max-w-[360px] object-contain pointer-events-none" loading="eager">
+                </a>
+            </div>
+            <div class="flex items-end justify-center pb-2">
+                <div class="flex font-medium gap-4 xl:gap-6 items-center text-base xl:text-[17.44px] text-spa-teal">
+                    <a href="../index.html" class="hover:text-spa-third transition-colors">Home</a>
+                    <div class="relative group">
+                        <a href="./" class="hover:text-spa-third transition-colors">
+                            Services
+                            <svg class="w-4 h-4 inline-block ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-spa-teal/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="massages.html" class="block px-4 py-2 text-sm text-spa-teal hover:bg-spa-secondary/30">Traditional Massages</a>
+                                <a href="signature.html" class="block px-4 py-2 text-sm text-spa-teal hover:bg-spa-secondary/30">Signature Massages</a>
+                                <a href="medical.html" class="block px-4 py-2 text-sm text-spa-teal hover:bg-spa-secondary/30">Medical Massages</a>
+                                <a href="scalp-spa.html" class="block px-4 py-2 text-sm text-spa-teal hover:bg-spa-secondary/30">Head Scalp Spa</a>
+                                <a href="facials.html" class="block px-4 py-2 text-sm text-spa-teal hover:bg-spa-secondary/30">Facials</a>
+                                <a href="acupuncture.html" class="block px-4 py-2 text-sm text-spa-teal hover:bg-spa-secondary/30">Acupuncture</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../about.html" class="hover:text-spa-third transition-colors">About Us</a>
+                    <a href="../membership.html" class="hover:text-spa-third transition-colors">Membership</a>
+                    <a href="../contact.html" class="hover:text-spa-third transition-colors">Contact</a>
+                    <a href="https://giftup.app/place-order/5fcbf7bd-46e2-491b-fb13-08dcf47882f6" target="_blank" class="hover:text-spa-third transition-colors">Gift Cards</a>
+                </div>
+            </div>
+            <div class="flex items-end justify-end">
+                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="h-[60px] xl:h-[69px] w-full rounded-[10px] flex items-center justify-center bg-spa-teal hover:bg-spa-teal-light transition-all">
+                    <span class="text-xl xl:text-[27px] text-white">Book Now</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="lg:hidden flex items-center justify-between min-h-[80px] sm:min-h-[90px]">
+            <a href="../index.html" class="block">
+                <img src="../assets/Logo.png" alt="Crystal Spa" class="h-16 sm:h-20 w-auto object-contain pointer-events-none" loading="eager">
+            </a>
+            <button id="mobile-menu-button" class="p-2" aria-label="Toggle menu">
+                <svg id="menu-icon" class="w-6 h-6 text-spa-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 text-spa-teal hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 px-2 border-t border-spa-teal/10 bg-white/80 backdrop-blur-md">
+            <div class="flex flex-col space-y-2 pt-4">
+                <a href="../index.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Home</a>
+                <a href="massages.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Traditional Massages</a>
+                <a href="signature.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Signature Massages</a>
+                <a href="medical.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Medical Massages</a>
+                <a href="scalp-spa.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Head Scalp Spa</a>
+                <a href="facials.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Facials</a>
+                <a href="acupuncture.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Acupuncture</a>
+                <a href="../about.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">About Us</a>
+                <a href="../membership.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Membership</a>
+                <a href="../contact.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Contact</a>
+                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="bg-spa-teal text-white py-3 px-6 rounded-[10px] font-medium text-center mt-2">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Landing -->
+    <section class="w-full pt-28 sm:pt-32 md:pt-40 pb-16 md:pb-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent"></div>
+        <div class="relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 md:mb-16 text-center pt-6 sm:pt-10 md:pt-16">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-medium text-spa-teal mb-4 sm:mb-6 leading-[1.1]">Our Services</h1>
+                <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-spa-teal via-spa-third to-spa-teal mx-auto mb-6 sm:mb-8 rounded-full"></div>
+                <p class="text-base sm:text-lg md:text-xl text-spa-teal/90 max-w-2xl mx-auto leading-relaxed px-4">
+                    Choose a category to explore our treatments
+                </p>
+            </div>
+
+            <!-- Service Category Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Traditional Massages -->
+                <a href="massages.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="h-48 sm:h-56 overflow-hidden">
+                        <img src="../assets/images/Relaxing-Massage.jpg" alt="Traditional Massages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl md:text-2xl font-medium text-spa-teal mb-2">Traditional Massages</h2>
+                        <p class="text-spa-teal/70 text-sm mb-4">Swedish, deep tissue, and customized massage therapy</p>
+                        <span class="text-spa-third font-medium text-sm flex items-center">
+                            View Services
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Signature Massages -->
+                <a href="signature.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="h-48 sm:h-56 overflow-hidden">
+                        <img src="../assets/images/Hot-Stone-Massage.jpg" alt="Signature Massages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl md:text-2xl font-medium text-spa-teal mb-2">Signature Massages</h2>
+                        <p class="text-spa-teal/70 text-sm mb-4">Aroma healing, hot stone, and salt stone therapies</p>
+                        <span class="text-spa-third font-medium text-sm flex items-center">
+                            View Services
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Medical Massages -->
+                <a href="medical.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="h-48 sm:h-56 overflow-hidden">
+                        <img src="../assets/images/Theraputic-Massage.jpg" alt="Medical Massages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl md:text-2xl font-medium text-spa-teal mb-2">Medical Massages</h2>
+                        <p class="text-spa-teal/70 text-sm mb-4">Therapeutic, lymphatic drainage, and prenatal</p>
+                        <span class="text-spa-third font-medium text-sm flex items-center">
+                            View Services
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Head Scalp Spa -->
+                <a href="scalp-spa.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="h-48 sm:h-56 overflow-hidden">
+                        <img src="../assets/images/esthetician-giving-a-facial-massage-with-cream-on-2025-03-05-04-30-16-utc.jpg" alt="Head Scalp Spa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl md:text-2xl font-medium text-spa-teal mb-2">Head Scalp Spa</h2>
+                        <p class="text-spa-teal/70 text-sm mb-4">Signature scalp treatments and luxury foot spa</p>
+                        <span class="text-spa-third font-medium text-sm flex items-center">
+                            View Services
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Facials -->
+                <a href="facials.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="h-48 sm:h-56 overflow-hidden">
+                        <img src="../assets/images/Classic-Facial.jpg" alt="Facials" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl md:text-2xl font-medium text-spa-teal mb-2">Facials</h2>
+                        <p class="text-spa-teal/70 text-sm mb-4">Classic, luxury, anti-aging, and specialty facials</p>
+                        <span class="text-spa-third font-medium text-sm flex items-center">
+                            View Services
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Acupuncture -->
+                <a href="acupuncture.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="h-48 sm:h-56 overflow-hidden">
+                        <img src="../assets/images/Acupuncture Therapy.jpg" alt="Acupuncture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl md:text-2xl font-medium text-spa-teal mb-2">Acupuncture</h2>
+                        <p class="text-spa-teal/70 text-sm mb-4">Traditional Eastern healing and balancing therapies</p>
+                        <span class="text-spa-third font-medium text-sm flex items-center">
+                            View Services
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-spa-teal text-white relative overflow-hidden rounded-t-3xl">
+        <div class="h-1 bg-gradient-to-r from-spa-secondary via-spa-third to-spa-secondary rounded-t-3xl"></div>
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="../assets/Logo.png" alt="Crystal Spa" class="h-16 w-auto brightness-0 invert opacity-90 mb-4">
+                    <p class="text-spa-secondary text-sm">A sister-owned spa in Herndon, Virginia.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-spa-secondary">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../index.html" class="text-white/80 hover:text-spa-secondary">Home</a></li>
+                        <li><a href="./" class="text-white/80 hover:text-spa-secondary">Services</a></li>
+                        <li><a href="../about.html" class="text-white/80 hover:text-spa-secondary">About Us</a></li>
+                        <li><a href="../contact.html" class="text-white/80 hover:text-spa-secondary">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-spa-secondary">Location I</h3>
+                    <p class="text-white/80 text-sm">102 Elden Street, Suite #18<br>Herndon, VA 20170</p>
+                    <a href="tel:5713524502" class="text-spa-secondary text-sm">(571) 352-4502</a>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-spa-secondary">Location II</h3>
+                    <p class="text-white/80 text-sm">150 Elden Street, Suite 150<br>Herndon, VA 20170</p>
+                    <a href="tel:5715199086" class="text-spa-secondary text-sm">(571) 519-9086</a>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-6 text-center">
+                <p class="text-spa-secondary text-sm">&copy; 2026 Crystal Massage Spa, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        
+        mobileMenuButton?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+    
+    <script>
+    (function(a){var b={businessId:'740c480b-efc2-4856-84d7-f78933ea52e1'};var c=a.createElement('script');var d=a.querySelector('script');c.src='https://static.joinboulevard.com/injector.min.js';c.async=true;c.onload=function(){blvd.init(b);};d.parentNode.insertBefore(c,d);})(document);
+    </script>
+</body>
+</html>
