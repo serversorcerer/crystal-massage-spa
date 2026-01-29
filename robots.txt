@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://crystalmassagespa.com/sitemap.xml
+Sitemap: https://crystalspaherndon.com/sitemap.xml
