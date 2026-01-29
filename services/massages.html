@@ -103,34 +103,35 @@
             </div>
         </div>
         
-        <!-- Mobile Navigation -->
-        <div class="lg:hidden flex items-center justify-between min-h-[80px] sm:min-h-[90px]">
-            <a href="../index.html" class="block">
-                <img src="../assets/Logo.png" alt="Crystal Spa" class="h-16 sm:h-20 w-auto object-contain pointer-events-none" loading="eager">
+    <!-- Mobile Navigation -->
+        <div class="lg:hidden flex flex-col items-center min-h-[100px] sm:min-h-[110px] py-3">
+            <a href="../index.html" class="block mb-2">
+                <img src="../assets/Logo.png" alt="Crystal Spa" class="h-20 sm:h-24 w-auto object-contain pointer-events-none" loading="eager">
             </a>
-            <button id="mobile-menu-button" class="p-2" aria-label="Toggle menu">
-                <svg id="menu-icon" class="w-6 h-6 text-spa-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-button" class="p-3" aria-label="Toggle menu">
+                <svg id="menu-icon" class="w-7 h-7 text-spa-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
-                <svg id="close-icon" class="w-6 h-6 text-spa-teal hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg id="close-icon" class="w-7 h-7 text-spa-teal hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
         
-        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 px-2 border-t border-spa-teal/10 bg-white/80 backdrop-blur-md">
-            <div class="flex flex-col space-y-2 pt-4">
-                <a href="../index.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Home</a>
-                <a href="massages.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Traditional Massages</a>
-                <a href="signature.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Signature Massages</a>
-                <a href="medical.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Medical Massages</a>
-                <a href="scalp-spa.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Head Scalp Spa</a>
-                <a href="facials.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Facials</a>
-                <a href="acupuncture.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Acupuncture</a>
-                <a href="../about.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">About Us</a>
-                <a href="../membership.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Membership</a>
-                <a href="../contact.html" class="text-spa-teal font-medium py-3 px-3 hover:bg-spa-secondary/30 rounded-md">Contact</a>
-                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="bg-spa-teal text-white py-3 px-6 rounded-[10px] font-medium text-center mt-2">
+        <div id="mobile-menu" class="hidden lg:hidden pb-6 px-4 border-t border-spa-teal/10 bg-white/95 backdrop-blur-md">
+            <div class="flex flex-col space-y-1 pt-6">
+                <a href="../index.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Home</a>
+                <a href="massages.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Traditional Massages</a>
+                <a href="signature.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Signature Massages</a>
+                <a href="medical.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Medical Massages</a>
+                <a href="scalp-spa.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Head Scalp Spa</a>
+                <a href="facials.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Facials</a>
+                <a href="acupuncture.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Acupuncture</a>
+                <div class="border-t border-spa-teal/10 my-2"></div>
+                <a href="../about.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">About Us</a>
+                <a href="../membership.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Membership</a>
+                <a href="../contact.html" class="text-spa-teal font-semibold text-lg py-4 px-4 hover:bg-spa-secondary/40 rounded-lg transition-colors">Contact</a>
+                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="bg-spa-teal text-white py-4 px-6 rounded-[10px] font-semibold text-lg text-center mt-4 hover:bg-spa-teal-light transition-colors">
                     Book Now
                 </a>
             </div>
@@ -182,17 +183,17 @@
                         <div class="service-details">
                             <div class="pt-4 border-t border-spa-secondary/30 mt-4">
                                 <p class="text-spa-teal/80 text-sm mb-4">Personalized full-body massage blending Swedish & Deep Tissue techniques.</p>
-                                <div class="space-y-1 mb-4">
+                                <div class="space-y-1">
                                     <p class="text-sm text-spa-teal"><span class="font-medium">30 min</span> — $69</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">60 min</span> — $139</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">90 min</span> — $189</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">120 min</span> — $239</p>
                                 </div>
-                                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white py-2 px-6 rounded-lg font-medium text-sm hover:bg-spa-teal-light transition-colors">
-                                    Book Now
-                                </a>
                             </div>
                         </div>
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="block w-full bg-spa-teal hover:bg-spa-teal-light text-white text-center py-3 rounded-lg font-medium transition-colors mt-4">
+                            Book Now
+                        </a>
                     </div>
                 </div>
 
@@ -217,17 +218,17 @@
                         <div class="service-details">
                             <div class="pt-4 border-t border-spa-secondary/30 mt-4">
                                 <p class="text-spa-teal/80 text-sm mb-4">A gentle, soothing massage to calm nerves and restore peace.</p>
-                                <div class="space-y-1 mb-4">
+                                <div class="space-y-1">
                                     <p class="text-sm text-spa-teal"><span class="font-medium">30 min</span> — $59</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">60 min</span> — $119</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">90 min</span> — $159</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">120 min</span> — $209</p>
                                 </div>
-                                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white py-2 px-6 rounded-lg font-medium text-sm hover:bg-spa-teal-light transition-colors">
-                                    Book Now
-                                </a>
                             </div>
                         </div>
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="block w-full bg-spa-teal hover:bg-spa-teal-light text-white text-center py-3 rounded-lg font-medium transition-colors mt-4">
+                            Book Now
+                        </a>
                     </div>
                 </div>
 
@@ -252,17 +253,17 @@
                         <div class="service-details">
                             <div class="pt-4 border-t border-spa-secondary/30 mt-4">
                                 <p class="text-spa-teal/80 text-sm mb-4">Firm-pressure therapy for tight muscles, knots, and fatigue.</p>
-                                <div class="space-y-1 mb-4">
+                                <div class="space-y-1">
                                     <p class="text-sm text-spa-teal"><span class="font-medium">30 min</span> — $69</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">60 min</span> — $129</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">90 min</span> — $169</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">120 min</span> — $219</p>
                                 </div>
-                                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white py-2 px-6 rounded-lg font-medium text-sm hover:bg-spa-teal-light transition-colors">
-                                    Book Now
-                                </a>
                             </div>
                         </div>
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="block w-full bg-spa-teal hover:bg-spa-teal-light text-white text-center py-3 rounded-lg font-medium transition-colors mt-4">
+                            Book Now
+                        </a>
                     </div>
                 </div>
 
@@ -287,15 +288,15 @@
                         <div class="service-details">
                             <div class="pt-4 border-t border-spa-secondary/30 mt-4">
                                 <p class="text-spa-teal/80 text-sm mb-4">Releases tension from long hours of desk work.</p>
-                                <div class="space-y-1 mb-4">
+                                <div class="space-y-1">
                                     <p class="text-sm text-spa-teal"><span class="font-medium">30 min</span> — $69</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">60 min</span> — $129</p>
                                 </div>
-                                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white py-2 px-6 rounded-lg font-medium text-sm hover:bg-spa-teal-light transition-colors">
-                                    Book Now
-                                </a>
                             </div>
                         </div>
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="block w-full bg-spa-teal hover:bg-spa-teal-light text-white text-center py-3 rounded-lg font-medium transition-colors mt-4">
+                            Book Now
+                        </a>
                     </div>
                 </div>
 
@@ -320,15 +321,15 @@
                         <div class="service-details">
                             <div class="pt-4 border-t border-spa-secondary/30 mt-4">
                                 <p class="text-spa-teal/80 text-sm mb-4">Foot acupressure stimulating internal organs and energy flow.</p>
-                                <div class="space-y-1 mb-4">
+                                <div class="space-y-1">
                                     <p class="text-sm text-spa-teal"><span class="font-medium">30 min</span> — $69</p>
                                     <p class="text-sm text-spa-teal"><span class="font-medium">60 min</span> — $129</p>
                                 </div>
-                                <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="inline-block bg-spa-teal text-white py-2 px-6 rounded-lg font-medium text-sm hover:bg-spa-teal-light transition-colors">
-                                    Book Now
-                                </a>
                             </div>
                         </div>
+                        <a href="#" onclick="if(window.blvd){blvd.openBookingWidget();return false;}else{window.location='https://blvd.app/@crystal-massage-and-beauty';return false;}" class="block w-full bg-spa-teal hover:bg-spa-teal-light text-white text-center py-3 rounded-lg font-medium transition-colors mt-4">
+                            Book Now
+                        </a>
                     </div>
                 </div>
             </div>
