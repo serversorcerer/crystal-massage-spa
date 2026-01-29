@@ -1,0 +1,6 @@
+# Crystal Spa Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://crystalmassagespa.com/sitemap.xml
